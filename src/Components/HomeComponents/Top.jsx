@@ -1,5 +1,5 @@
 import React from "react";
-import { HomeTop } from "../../Elements/Elements";
+import { CardContainer, HomeTop } from "../../Elements/Elements";
 // import icons from "../../Images/Icons/home-page-icons.svg";
 
 export const Top = () => {
@@ -54,6 +54,78 @@ export const Top = () => {
           <Slider />
         </div>
       </div>
+      <CardContainer>
+        <Card
+          title="Term Life Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Term Life Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Term Life Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Term Life Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Term Life Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Term Life Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Term Life Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Term Life Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Term Life Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Term Life Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Term Life Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Term Life Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Term Life Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Term Life Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+      </CardContainer>
     </HomeTop>
   );
 };
@@ -64,6 +136,18 @@ const Slider = () => {
       <div className="slider-child">1</div>
       <div className="slider-child">2</div>
       <div className="slider-child">3</div>
+    </div>
+  );
+};
+
+const Card = ({ img, title, info }) => {
+  return (
+    <div className="card">
+      <div>
+        <img src={img} alt={title} />
+        <p>{title}</p>
+      </div>
+      <div>{info}</div>
     </div>
   );
 };

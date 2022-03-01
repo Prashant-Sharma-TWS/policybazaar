@@ -6,6 +6,7 @@ export const Error = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 30px;
 `;
 
 export const Nav = styled.nav`
@@ -149,6 +150,74 @@ export const HomeTop = styled.div`
         width: 330px;
         background-color: lightcoral;
       }
+    }
+  }
+`;
+
+export const CardContainer = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 120px);
+  justify-content: space-between;
+  row-gap: 50px;
+  padding: 50px 0;
+
+  @media screen and (max-width: 1050px) {
+    grid-template-columns: repeat(5, 120px);
+  }
+  @media screen and (max-width: 850px) {
+    grid-template-columns: repeat(4, 120px);
+  }
+  @media screen and (max-width: 650px) {
+    grid-template-columns: repeat(3, 120px);
+  }
+  @media screen and (max-width: 650px) {
+    grid-template-columns: repeat(3, 120px);
+  }
+  @media screen and (max-width: 450px) {
+    grid-template-columns: repeat(2, 120px);
+  }
+
+  > .card {
+    width: 120px;
+    height: 100px;
+    position: relative;
+    text-align: center;
+    padding: 0 10px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 6px 8px rgb(52 105 203 / 16%);
+
+    img {
+      width: 28px;
+      height: 30px;
+      margin: 10px 0 10px;
+    }
+    p {
+      font-size: 12px;
+    }
+    div:nth-of-type(2) {
+      width: 125px;
+      height: 40px;
+      position: relative;
+      top: 0;
+      left: -12px;
+      font-size: 10px;
+      font-size: 10px;
+      font-weight: 500;
+      color: #0065ff;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      background: #edf1f7;
+    }
+    div:nth-of-type(2)::before {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #0065ff;
+      content: "";
+      display: inline-block;
+      margin-right: 5px;
     }
   }
 `;

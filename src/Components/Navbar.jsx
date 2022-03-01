@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { Nav } from "../Elements/Elements";
 import logo from "../Images/logo.svg";
 import userIcon from "../Images/Icons/user-icon.svg";
@@ -10,12 +11,17 @@ import { logoutRequest, logoutSuccess } from "../Redux/Auth/auth.action";
 export const Navbar = () => {
   const { isUserLoggedIn } = useSelector((state) => state.auth);
   const [clickedSignIn, setClickedSignIn] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>
       <Nav>
         <div>
-          <img src={logo} alt="policybazaar-logo" />
+          <img
+            src={logo}
+            alt="policybazaar-logo"
+            onClick={() => navigate("/policybazaar")}
+          />
         </div>
         <ul>
           <ListItem

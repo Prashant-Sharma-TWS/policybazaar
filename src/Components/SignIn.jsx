@@ -4,9 +4,11 @@ import flag from "../Images/flag.svg";
 import formImage from "../Images/form-image.webp";
 import { useDispatch } from "react-redux";
 import { loginRequest, loginSuccess } from "../Redux/Auth/auth.action";
+import { useNavigate } from "react-router-dom";
 
 export const SignIn = ({ clickedSignIn, setClickedSignIn }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [check, setCheck] = useState({
     mobile: "",
     otp: "",
@@ -50,6 +52,7 @@ export const SignIn = ({ clickedSignIn, setClickedSignIn }) => {
         otpbtn: "Sign in with OTP",
         otp: "",
       });
+      navigate('/policybazaar/dashboard');
       return;
     }
     setCheck({
