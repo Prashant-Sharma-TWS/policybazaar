@@ -141,14 +141,120 @@ export const HomeTop = styled.div`
       }
     }
 
-    .slider-parent {
+    .for-slider-left {
+      width: 62%;
+      height: 50vh;
       position: absolute;
-      background-color: orange;
-      display: none;
+      background-color: #ffffff;
+      z-index: -1;
+    }
+    .for-slider-right {
+      width: 10%;
+      height: 50vh;
+      position: absolute;
+      right: -3%;
+      background-color: #ffffff;
+      z-index: -1;
+    }
+
+    .slider-parent {
+      display: flex;
+      position: absolute;
+      top: 100px;
+      left: 20px;
 
       .slider-child {
+        position: absolute;
         width: 330px;
-        background-color: lightcoral;
+        padding: 20px 20px;
+        background-color: #ffffff;
+
+        > span {
+          padding: 5px 11px;
+        }
+        > h3 {
+          margin: 20px 0 8px;
+        }
+        > p {
+          font-size: 16px;
+          color: #172b4d;
+        }
+        > button {
+          display: inline-block;
+          font-size: 14px;
+          font-weight: 500;
+          padding: 10px 20px;
+          text-decoration: none;
+          color: #fff;
+          background: #0663f6;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+        }
+      }
+
+      .slider-child:nth-of-type(1) {
+        z-index: -2;
+        left: 1000px;
+        animation: slide 15s linear 0s infinite;
+        transition: all 0.5s linear;
+        > span,
+        h3 {
+          color: #19b24d;
+        }
+        > span {
+          background: #e3fcef;
+        }
+      }
+      .slider-child:nth-of-type(2) {
+        z-index: -3;
+        left: 1000px;
+        animation: slide 15s linear 5s infinite;
+        transition: all 0.5s linear;
+        > span,
+        h3 {
+          color: #00a3bf;
+        }
+        > span {
+          background: #e6fcff;
+        }
+        b {
+          color: #ff991f;
+        }
+      }
+      .slider-child:nth-of-type(3) {
+        z-index: -4;
+        left: 1000px;
+        animation: slide 15s linear 10s infinite;
+        transition: all 0.5s linear;
+        > span {
+          color: #6554c0;
+          background: #eae6ff;
+        }
+        > h3 {
+          font-weight: 400;
+          color: #172b4d;
+        }
+        > p {
+          font-size: 24px;
+        }
+      }
+      @keyframes slide {
+        0% {
+          transform: translateX(0px);
+        }
+        1%,
+        30% {
+          transform: translateX(-90px);
+        }
+        33%,
+        63% {
+          transform: translateX(-400px);
+        }
+        65%,
+        100% {
+          transform: translateX(-660px);
+        }
       }
     }
   }

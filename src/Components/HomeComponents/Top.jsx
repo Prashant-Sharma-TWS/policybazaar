@@ -53,6 +53,8 @@ export const Top = () => {
           </div>
           <Slider />
         </div>
+        <div className="for-slider-left"></div>
+        <div className="for-slider-right"></div>
       </div>
       <CardContainer>
         <Card
@@ -133,9 +135,28 @@ export const Top = () => {
 const Slider = () => {
   return (
     <div className="slider-parent">
-      <div className="slider-child">1</div>
-      <div className="slider-child">2</div>
-      <div className="slider-child">3</div>
+      <div className="slider-child">
+        <span>Health Insurance</span>
+        <h3>Save tax upto ₹ 75,000</h3>
+        <p>under sec 80D</p>
+        <button>Buy now</button>
+      </div>
+      <div className="slider-child">
+        <span>Investment Plans</span>
+        <h3>Save tax upto ₹ 46,800</h3>
+        <p>
+          under sec 80C &amp; <b>no tax on returns*</b>
+        </p>
+        <button>Buy now</button>
+      </div>
+      <div className="slider-child">
+        <span>Employee Insurance</span>
+        <h3>Custum plans at just</h3>
+        <p>
+          <b>₹ 57 per employee*</b>
+        </p>
+        <button>Buy now</button>
+      </div>
     </div>
   );
 };
