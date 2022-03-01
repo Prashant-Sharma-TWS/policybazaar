@@ -117,9 +117,10 @@ export const HomeTop = styled.div`
 
     > div:nth-of-type(1) {
       h1 {
-        margin: 0 0 20px;
+        margin: 0 0 25px;
         font-size: 36px;
         font-weight: 400;
+        line-height: 3.3rem;
         color: #253858;
       }
 
@@ -143,16 +144,16 @@ export const HomeTop = styled.div`
 
     .for-slider-left {
       width: 62%;
-      height: 50vh;
+      height: 300px;
       position: absolute;
       background-color: #ffffff;
       z-index: -1;
     }
     .for-slider-right {
-      width: 10%;
-      height: 50vh;
+      width: 7%;
+      height: 300px;
       position: absolute;
-      right: -3%;
+      right: 0;
       background-color: #ffffff;
       z-index: -1;
     }
