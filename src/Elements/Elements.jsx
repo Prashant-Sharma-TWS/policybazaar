@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const Error = styled.div`
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const Nav = styled.nav`
   width: 100%;
   height: 60px;
@@ -46,13 +54,42 @@ export const Nav = styled.nav`
     }
 
     .drop-down {
-      width: 87%;
-      height: 70vh;
       position: absolute;
-      top: 60px;
+      top: 38px;
       z-index: -5;
-      display: none;
-      background-color: #ddd;
+      background: #fff;
+      box-shadow: 0 6px 16px rgb(52 105 203 / 16%);
+      border-top: 1px solid #f1f1f1;
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+
+    .user-icon {
+      padding: 2px 28px 4px 10px;
+      border: 1px solid #0065ff;
+      border-radius: 4px;
+    }
+    .user {
+      width: 220px;
+      height: 255px;
+      right: 50px;
+
+      ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        line-height: 3.8rem;
+
+        li {
+          width: 100%;
+          font-size: 16px;
+          font-weight: 600;
+          color: #222;
+          transition: all 0.1s ease;
+        }
+      }
     }
   }
 
@@ -104,7 +141,6 @@ export const HomeTop = styled.div`
     }
 
     .slider-parent {
-      width: 3400px;
       position: absolute;
       background-color: orange;
 
@@ -113,5 +149,16 @@ export const HomeTop = styled.div`
         background-color: lightcoral;
       }
     }
+  }
+`;
+
+export const PageFooter = styled.footer`
+  width: 100%;
+  height: 100px;
+  margin: 20px 0 0;
+  padding: 50px 100px 100px;
+  background-color: #776bfd;
+  > div {
+    position: relative;
   }
 `;

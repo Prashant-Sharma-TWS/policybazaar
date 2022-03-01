@@ -1,5 +1,10 @@
 import React from "react";
+import { PageFooter } from "../Elements/Elements";
 
 export const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <PageFooter>
+      <div>Footer</div>
+    </PageFooter>
+  );
 };

@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Nav } from "../Elements/Elements";
 import logo from "../Images/logo.svg";
-import flag from "../Images/flag.svg";
-import formImage from "../Images/form-image.webp";
+import userIcon from "../Images/Icons/user-icon.svg";
+import { SignIn } from "./SignIn";
+import { useDispatch } from "react-redux";
+import { logoutRequest, logoutSuccess } from "../Redux/Auth/auth.action";
 
 export const Navbar = () => {
   const { isUserLoggedIn } = useSelector((state) => state.auth);
@@ -16,12 +18,33 @@ export const Navbar = () => {
           <img src={logo} alt="policybazaar-logo" />
         </div>
         <ul>
-          <ListItem text="Insurance Products" classProperty="arrow-down" />
-          <ListItem text="Renew Your Policy" classProperty="arrow-down" />
-          <ListItem text="File a claim" classProperty="arrow-down" />
-          <ListItem text="Support" classProperty="arrow-down" />
+          <ListItem
+            text="Insurance Products"
+            arrowDown="arrow-down"
+            isUserLoggedIn={isUserLoggedIn}
+          />
+          <ListItem
+            text="Renew Your Policy"
+            arrowDown="arrow-down"
+            isUserLoggedIn={isUserLoggedIn}
+          />
+          <ListItem
+            text="File a claim"
+            arrowDown="arrow-down"
+            isUserLoggedIn={isUserLoggedIn}
+          />
+          <ListItem
+            text="Support"
+            arrowDown="arrow-down"
+            isUserLoggedIn={isUserLoggedIn}
+          />
           {isUserLoggedIn ? (
-            <ListItem text="User" classProperty="arrow-down" />
+            <ListItem
+              text="User"
+              arrowDown="arrow-down"
+              isUserLoggedIn={isUserLoggedIn}
+              className="user"
+            />
           ) : (
             <button onClick={() => setClickedSignIn(true)}>Sign in</button>
           )}
@@ -35,55 +58,52 @@ export const Navbar = () => {
   );
 };
 
-const ListItem = ({ text, classProperty }) => {
-  // const [open, setOpen] = useState(false);
+const ListItem = ({ text, arrowDown, className, isUserLoggedIn }) => {
+  const [open, setOpen] = useState(false);
+  const dispatch = useDispatch();
 
   return (
     <>
-      <li>
-        {text}
-        <i className={classProperty}></i>
+      <li
+        className={isUserLoggedIn && text === "User" ? "user-icon" : "normal"}
+        onMouseEnter={() => setOpen(true)}
+        onMouseLeave={() => setOpen(false)}
+      >
+        {text !== "User" ? (
+          text
+        ) : (
+          <i>
+            <img src={userIcon} alt="user-icon" />
+          </i>
+        )}
+        <i className={arrowDown}></i>
       </li>
-      <div className="drop-down insurance-product">
+      {/* <div className={open ? `drop-down show ${className}` : "drop-down hide"}>
         <ul>
-          <li>hey</li>
+          <li>{text}</li>
         </ul>
-      </div>
+      </div> */}
+      {text === "User" && (
+        <div
+          className={open ? `drop-down show ${className}` : "drop-down hide"}
+          onMouseEnter={() => setOpen(true)}
+          onMouseLeave={() => setOpen(false)}
+        >
+          <ul>
+            <li>Your Profile</li>
+            <li>Your Policies</li>
+            <li>Your Transactions</li>
+            <li
+              onClick={() => {
+                dispatch(logoutRequest());
+                dispatch(logoutSuccess());
+              }}
+            >
+              Sign Out
+            </li>
+          </ul>
+        </div>
+      )}
     </>
-  );
-};
-
-const SignIn = ({ clickedSignIn, setClickedSignIn }) => {
-  return (
-    <div className={clickedSignIn ? "sign-in-show" : "sign-in-hide"}>
-      <div className="form-container">
-        <div className="close-modal" onClick={() => setClickedSignIn(false)}>
-          <span></span>
-          <span></span>
-        </div>
-        <div className="form-top">
-          <div>
-            <img src={logo} alt="policybazaar-logo" />
-          </div>
-          <div>
-            <img src={formImage} alt="formimg" />
-            <h6>To sign in, please enter your mobile number</h6>
-          </div>
-        </div>
-        <div className="form-bottom">
-          <div className="mobile-input">
-            <img src={flag} alt="in" />
-            <i className="arrow-down"></i>
-            <p>+91</p>
-            <input type="text" name="mobile" placeholder="Mobile Number" />
-          </div>
-          <button className="sign-in-top">Sign in with OTP</button>
-          <button className="sign-in-password">Sign in with Password</button>
-          <p>
-            First Time User? <b>Sign up</b>
-          </p>
-        </div>
-      </div>
-    </div>
   );
 };
