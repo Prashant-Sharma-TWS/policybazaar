@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/policybazaar/static/css/main.96c80da0.css",
-    "main.js": "/policybazaar/static/js/main.50dd853d.js",
+    "main.js": "/policybazaar/static/js/main.b2a071c0.js",
     "static/media/logo.svg": "/policybazaar/static/media/logo.cc9a9192b5abf72178078a266a7b96f0.svg",
     "static/media/form-image.webp": "/policybazaar/static/media/form-image.8529a094192a5e85d9b6.webp",
     "static/media/flag.svg": "/policybazaar/static/media/flag.e5926cb75dcbb15638dae2af4b9abbcc.svg",
     "index.html": "/policybazaar/index.html",
     "static/media/user-icon.svg": "/policybazaar/static/media/user-icon.e0cf0b4c432083bdde605fea5e65fbc8.svg",
     "main.96c80da0.css.map": "/policybazaar/static/css/main.96c80da0.css.map",
-    "main.50dd853d.js.map": "/policybazaar/static/js/main.50dd853d.js.map"
+    "main.b2a071c0.js.map": "/policybazaar/static/js/main.b2a071c0.js.map"
   },
   "entrypoints": [
     "static/css/main.96c80da0.css",
-    "static/js/main.50dd853d.js"
+    "static/js/main.b2a071c0.js"
   ]
 }
