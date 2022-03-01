@@ -14,7 +14,7 @@ export const Nav = styled.nav`
   background-color: #fff;
 
   ul {
-    width: 50%;
+    width: 55%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,6 +54,16 @@ export const Nav = styled.nav`
       display: none;
       background-color: #ddd;
     }
+  }
+
+  button {
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #0065ff;
+    border-radius: 8px;
+    color: #0065ff;
+    background-color: transparent;
+    cursor: pointer;
   }
 `;
 
