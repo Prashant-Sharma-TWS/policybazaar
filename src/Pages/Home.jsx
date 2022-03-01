@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import { Top } from "../Components/HomeComponents/Top";
 
 export const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div>
+      <Top />
+    </div>
+  );
+};
