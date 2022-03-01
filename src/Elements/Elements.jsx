@@ -246,10 +246,15 @@ export const HomeTop = styled.div`
         1%,
         30% {
           transform: translateX(-90px);
+          z-index: 1;
+        }
+        30% {
+          z-index: -2;
         }
         33%,
         63% {
           transform: translateX(-400px);
+          z-index: -2;
         }
         65%,
         100% {
