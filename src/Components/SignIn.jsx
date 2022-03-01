@@ -2,13 +2,11 @@ import { useState } from "react";
 import logo from "../Images/logo.svg";
 import flag from "../Images/flag.svg";
 import formImage from "../Images/form-image.webp";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { loginRequest, loginSuccess } from "../Redux/Auth/auth.action";
 
 export const SignIn = ({ clickedSignIn, setClickedSignIn }) => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const [check, setCheck] = useState({
     mobile: "",
     otp: "",
@@ -44,13 +42,22 @@ export const SignIn = ({ clickedSignIn, setClickedSignIn }) => {
       dispatch(loginRequest());
       dispatch(loginSuccess(check.mobile));
       setClickedSignIn(false);
+      setCheck({
+        ...check,
+        mobile: "",
+        errorMessage: "",
+        text: "To sign in, please enter your mobile number",
+        otpbtn: "Sign in with OTP",
+        otp: "",
+      });
+      return;
     }
     setCheck({
       ...check,
       text: `Please enter 4 digit OTP sent on ${check.mobile}`,
       errorMessage: "",
       otpbtn: "Confirm OTP",
-      otp: "2356",
+      otp: "",
     });
   };
 
@@ -83,7 +90,7 @@ export const SignIn = ({ clickedSignIn, setClickedSignIn }) => {
           </div>
         </div>
         <div className="form-bottom">
-          {check.otp ? (
+          {check.otpbtn === "Confirm OTP" ? (
             <div className="mobile-otp">
               <input
                 type="text"

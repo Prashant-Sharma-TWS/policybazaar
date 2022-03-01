@@ -10,7 +10,7 @@ export const Error = styled.div`
 
 export const Nav = styled.nav`
   width: 100%;
-  height: 60px;
+  height: 70px;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -18,7 +18,7 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 0 100px;
+  padding: 5px 100px;
   background-color: #fff;
 
   ul {
@@ -55,7 +55,7 @@ export const Nav = styled.nav`
 
     .drop-down {
       position: absolute;
-      top: 38px;
+      top: 44px;
       z-index: -5;
       background: #fff;
       box-shadow: 0 6px 16px rgb(52 105 203 / 16%);
@@ -143,6 +143,7 @@ export const HomeTop = styled.div`
     .slider-parent {
       position: absolute;
       background-color: orange;
+      display: none;
 
       .slider-child {
         width: 330px;
@@ -154,11 +155,75 @@ export const HomeTop = styled.div`
 
 export const PageFooter = styled.footer`
   width: 100%;
-  height: 100px;
   margin: 20px 0 0;
-  padding: 50px 100px 100px;
-  background-color: #776bfd;
-  > div {
-    position: relative;
+  padding-bottom: 100px;
+  color: #ffffff;
+  background-color: #03203c;
+
+  > div:nth-of-type(1) {
+    padding: 50px 100px;
+    @media screen and (max-width: 1050px) {
+      padding: 0 20%;
+    }
+    @media screen and (max-width: 770px) {
+      padding: 0 8%;
+    }
+    @media screen and (max-width: 570px) {
+      padding: 0 100px;
+    }
+  }
+
+  div:nth-of-type(1) div:nth-of-type(1) {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .more-products {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: space-around;
+    align-items: stretch;
+    margin: 50px 0 20px;
+
+    @media screen and (max-width: 1050px) {
+      height: 700px;
+    }
+    @media screen and (max-width: 570px) {
+      height: 1400px;
+    }
+
+    > div {
+      > p {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0 0 16px;
+      }
+
+      > div p {
+        font-size: 14px;
+        padding-left: 5px;
+        color: rgb(202, 200, 200);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .middle-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 100px 10px;
+    background-color: #10385e;
+
+    > p {
+      font-size: 14px;
+      margin-right: 5px;
+      color: rgb(202, 200, 200);
+      cursor: pointer;
+    }
   }
 `;

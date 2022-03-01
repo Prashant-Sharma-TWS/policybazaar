@@ -16,9 +16,11 @@ li {
 
 .show {
   display: block;
+  color: rgb(202, 200, 200);
 }
 .hide {
   display: none;
+  color: #10385e;
 }
 
 .sign-in-show {
