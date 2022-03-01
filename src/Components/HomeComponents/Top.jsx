@@ -61,62 +61,62 @@ export const Top = () => {
           info="Covers covid-19"
         />
         <Card
-          title="Term Life Insurance"
+          title="Health Insurance"
           img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
           info="Covers covid-19"
         />
         <Card
-          title="Term Life Insurance"
+          title="Investment Plans"
           img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
           info="Covers covid-19"
         />
         <Card
-          title="Term Life Insurance"
+          title="Car Insurance"
           img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
           info="Covers covid-19"
         />
         <Card
-          title="Term Life Insurance"
+          title="2 Wheeler Insurance"
           img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
           info="Covers covid-19"
         />
         <Card
-          title="Term Life Insurance"
+          title="Family Health Insurance"
           img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
           info="Covers covid-19"
         />
         <Card
-          title="Term Life Insurance"
+          title="Guranteed Return Plan"
           img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
           info="Covers covid-19"
         />
         <Card
-          title="Term Life Insurance"
+          title="Saral Jeevan Bima"
           img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
           info="Covers covid-19"
         />
         <Card
-          title="Term Life Insurance"
+          title="Travel Insurance"
           img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
           info="Covers covid-19"
         />
         <Card
-          title="Term Life Insurance"
+          title="Childs Savings Plans"
           img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
           info="Covers covid-19"
         />
         <Card
-          title="Term Life Insurance"
+          title="Retirement Plans"
           img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
           info="Covers covid-19"
         />
         <Card
-          title="Term Life Insurance"
+          title="Group Health Insurance"
           img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
           info="Covers covid-19"
         />
         <Card
-          title="Term Life Insurance"
+          title="1 Cr Health Insurance"
           img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
           info="Covers covid-19"
         />

@@ -183,11 +183,14 @@ export const CardContainer = styled.div`
     height: 100px;
     position: relative;
     text-align: center;
-    padding: 0 10px;
+    color: #253858;
     border: none;
     border-radius: 8px;
     box-shadow: 0 6px 8px rgb(52 105 203 / 16%);
 
+    div:nth-of-type(1) {
+      min-height: 100px;
+    }
     img {
       width: 28px;
       height: 30px;
@@ -197,11 +200,11 @@ export const CardContainer = styled.div`
       font-size: 12px;
     }
     div:nth-of-type(2) {
-      width: 125px;
+      width: 120px;
       height: 40px;
       position: relative;
       top: 0;
-      left: -12px;
+      left: 0;
       font-size: 10px;
       font-size: 10px;
       font-weight: 500;
