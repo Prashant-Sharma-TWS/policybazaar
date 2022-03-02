@@ -337,6 +337,46 @@ export const CardContainer = styled.div`
   }
 `;
 
+export const SlideOne = styled.div`
+  width: 100%;
+  padding: 32px 100px 20px;
+  background-color: #f2f7ff;
+  overflow: hidden;
+  transition: all 1s linear;
+
+  > div:nth-of-type(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    transition: all 1s linear;
+
+    > div {
+      margin: 0 3px;
+    }
+  }
+
+  > div:nth-of-type(2) {
+    width: 40px;
+    margin: auto;
+
+    span {
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      margin: 5px;
+      background-color: #777;
+      border-radius: 50%;
+      cursor: pointer;
+      opacity: 0.45;
+
+      :hover {
+        background-color: #2f4efb;
+      }
+    }
+  }
+`;
+
 export const PageFooter = styled.footer`
   width: 100%;
   margin: 20px 0 0;
