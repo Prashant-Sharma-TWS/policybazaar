@@ -1,5 +1,6 @@
 import React from "react";
-import { CardContainer, HomeTop } from "../../Elements/Elements";
+import { useNavigate } from "react-router-dom";
+import { CardContainer, HomeTop } from "../../Elements/Home";
 // import icons from "../../Images/Icons/home-page-icons.svg";
 
 export const Top = () => {
@@ -162,8 +163,15 @@ const Slider = () => {
 };
 
 const Card = ({ img, title, info }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="card">
+    <div
+      className="card"
+      onClick={() => {
+        navigate(`/policybazaar/${title}`);
+      }}
+    >
       <div>
         <img src={img} alt={title} />
         <p>{title}</p>

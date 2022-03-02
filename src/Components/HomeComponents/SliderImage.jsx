@@ -1,5 +1,5 @@
 import React from "react";
-import { SlideOne } from "../../Elements/Elements";
+import { SlideOne } from "../../Elements/Home";
 import imageOne from "../../Images/slide-image-1.png";
 import imageTwo from "../../Images/slide-image-2.png";
 import imageThree from "../../Images/slide-image-3.png";
