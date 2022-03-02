@@ -114,6 +114,7 @@ export const HomeTop = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 50%);
     align-items: center;
+    overflow: none;
 
     > div:nth-of-type(1) {
       h1 {
@@ -162,10 +163,32 @@ export const HomeTop = styled.div`
       display: flex;
       position: absolute;
       top: 100px;
-      left: 20px;
+      left: 92%;
+      z-index: -2;
+      overflow-x: none;
+      animation: slide 15s linear infinite;
+
+      @keyframes slide {
+        0% {
+          transform: translateX(0%);
+          display: none;
+        }
+        3%, 33% {
+          transform: translateX(-31.5%);
+          display: block;
+        }
+        36%, 66% {
+          transform: translateX(-65%);
+        }
+        69%, 99% {
+          transform: translateX(-98%);
+        }
+        100% {
+          display: none;
+        }
+      }
 
       .slider-child {
-        position: absolute;
         width: 330px;
         padding: 20px 20px;
         background-color: #ffffff;
@@ -195,10 +218,6 @@ export const HomeTop = styled.div`
       }
 
       .slider-child:nth-of-type(1) {
-        z-index: -2;
-        left: 1000px;
-        animation: slide 15s linear 0s infinite;
-        transition: all 0.5s linear;
         > span,
         h3 {
           color: #19b24d;
@@ -208,10 +227,6 @@ export const HomeTop = styled.div`
         }
       }
       .slider-child:nth-of-type(2) {
-        z-index: -3;
-        left: 1000px;
-        animation: slide 15s linear 5s infinite;
-        transition: all 0.5s linear;
         > span,
         h3 {
           color: #00a3bf;
@@ -224,10 +239,6 @@ export const HomeTop = styled.div`
         }
       }
       .slider-child:nth-of-type(3) {
-        z-index: -4;
-        left: 1000px;
-        animation: slide 15s linear 10s infinite;
-        transition: all 0.5s linear;
         > span {
           color: #6554c0;
           background: #eae6ff;
@@ -238,28 +249,6 @@ export const HomeTop = styled.div`
         }
         > p {
           font-size: 24px;
-        }
-      }
-      @keyframes slide {
-        0% {
-          transform: translateX(0px);
-        }
-        1%,
-        30% {
-          transform: translateX(-90px);
-          z-index: 1;
-        }
-        30% {
-          z-index: -2;
-        }
-        33%,
-        63% {
-          transform: translateX(-400px);
-          z-index: -2;
-        }
-        65%,
-        100% {
-          transform: translateX(-660px);
         }
       }
     }
@@ -372,8 +361,21 @@ export const SlideOne = styled.div`
 
       :hover {
         background-color: #2f4efb;
+        opacity: 1;
       }
     }
+  }
+`;
+
+export const Partner = styled.div`
+  width: 100%;
+  padding: 70px 0;
+  background-color: #f7f9ff;
+
+  > div {
+    width: 85%;
+    margin: auto;
+    text-align: center;
   }
 `;
 
