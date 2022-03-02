@@ -1,5 +1,5 @@
 import React from "react";
-import { HomeTop } from "../../Elements/Elements";
+import { CardContainer, HomeTop } from "../../Elements/Elements";
 // import icons from "../../Images/Icons/home-page-icons.svg";
 
 export const Top = () => {
@@ -53,7 +53,81 @@ export const Top = () => {
           </div>
           <Slider />
         </div>
+        <div className="for-slider-left"></div>
+        <div className="for-slider-right"></div>
       </div>
+      <CardContainer>
+        <Card
+          title="Term Life Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Health Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Investment Plans"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Car Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="2 Wheeler Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Family Health Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Guranteed Return Plan"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Saral Jeevan Bima"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Travel Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Childs Savings Plans"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Retirement Plans"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Group Health Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="1 Cr Health Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+        <Card
+          title="Term Life Insurance"
+          img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+          info="Covers covid-19"
+        />
+      </CardContainer>
     </HomeTop>
   );
 };
@@ -61,9 +135,40 @@ export const Top = () => {
 const Slider = () => {
   return (
     <div className="slider-parent">
-      <div className="slider-child">1</div>
-      <div className="slider-child">2</div>
-      <div className="slider-child">3</div>
+      <div className="slider-child">
+        <span>Health Insurance</span>
+        <h3>Save tax upto ₹ 75,000</h3>
+        <p>under sec 80D</p>
+        <button>Buy now</button>
+      </div>
+      <div className="slider-child">
+        <span>Investment Plans</span>
+        <h3>Save tax upto ₹ 46,800</h3>
+        <p>
+          under sec 80C &amp; <b>no tax on returns*</b>
+        </p>
+        <button>Buy now</button>
+      </div>
+      <div className="slider-child">
+        <span>Employee Insurance</span>
+        <h3>Custum plans at just</h3>
+        <p>
+          <b>₹ 57 per employee*</b>
+        </p>
+        <button>Buy now</button>
+      </div>
+    </div>
+  );
+};
+
+const Card = ({ img, title, info }) => {
+  return (
+    <div className="card">
+      <div>
+        <img src={img} alt={title} />
+        <p>{title}</p>
+      </div>
+      <div>{info}</div>
     </div>
   );
 };
