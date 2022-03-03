@@ -4,6 +4,7 @@ import { Dashboard } from "../Components/Dashboard";
 import { Error } from "../Elements/NavbarFooter";
 import { Home } from "../Pages/Home";
 import { Insurance } from "../Pages/Insurance";
+import { Quotes } from "../Pages/Quotes";
 
 export const Routers = () => {
   return (
@@ -14,6 +15,10 @@ export const Routers = () => {
         <Route
           path="/policybazaar/Term%20Life%20Insurance"
           element={<Insurance />}
+        />
+        <Route
+          path="/policybazaar/Term%20Life%20Insurance/quotes"
+          element={<Quotes />}
         />
         <Route
           path="/policybazaar/*"
