@@ -1,0 +1,10 @@
+.slideContainer {
+  background-color: #f2f7ff;
+  border: 2px solid red;
+  /* margin: 2em; */
+  /* padding: 2em; */
+}
+
+.slideWrapper{
+  margin: 3em;
+}
