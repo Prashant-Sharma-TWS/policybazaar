@@ -1,0 +1,14 @@
+.slideContainer {
+  background-color: #f2f7ff;
+  /* border: 2px solid red; */
+  /* margin: 2em; */
+  padding: 2em 0 1em 0;
+}
+
+.slideWrapper {
+  /* margin: 3em; */
+  width: 82%;
+  margin: 2em auto;
+  /* border: 2px solid black; */
+}
+
