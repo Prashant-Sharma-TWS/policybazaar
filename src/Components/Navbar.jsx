@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { Nav } from "../Elements/Elements";
+import { Nav } from "../Elements/NavbarFooter";
 import logo from "../Images/logo.svg";
 import userIcon from "../Images/Icons/user-icon.svg";
 import { SignIn } from "./SignIn";
@@ -108,6 +108,89 @@ const ListItem = ({ text, arrowDown, className, isUserLoggedIn }) => {
               Sign Out
             </li>
           </ul>
+        </div>
+      )}
+
+      {/* Drop down styles for other drop-down list inside navbar */}
+      {text === "Insurance Products" && (
+        <div
+          className={open ? `drop-down show` : "drop-down hide"}
+          onMouseEnter={() => setOpen(true)}
+          onMouseLeave={() => setOpen(false)}
+        >
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <ul style={{ display: "flex", flexDirection: "column" }}>
+              <li>Term Insurance</li>
+              <li>Saral Jeevan Bima</li>
+              <li>Life Insurance</li>
+              <li>1 Crore Term Insurance</li>
+              <li>Term Insurance Return of Premium</li>
+              <li>Term Insurance for Spouse</li>
+              <li>Term Insurance Calculator</li>
+              <li>Dedicated Claim Assistance</li>
+            </ul>
+            <ul style={{ display: "flex", flexDirection: "column" }}>
+              <li>Term Insurance</li>
+              <li>Saral Jeevan Bima</li>
+              <li>Life Insurance</li>
+              <li>1 Crore Term Insurance</li>
+              <li>Term Insurance Return of Premium</li>
+              <li>Term Insurance for Spouse</li>
+              <li>Term Insurance Calculator</li>
+              <li>Dedicated Claim Assistance</li>
+            </ul>
+            <ul style={{ display: "flex", flexDirection: "column" }}>
+              <li>Term Insurance</li>
+              <li>Saral Jeevan Bima</li>
+              <li>Life Insurance</li>
+              <li>1 Crore Term Insurance</li>
+              <li>Term Insurance Return of Premium</li>
+              <li>Term Insurance for Spouse</li>
+              <li>Term Insurance Calculator</li>
+              <li>Dedicated Claim Assistance</li>
+            </ul>
+          </div>
+        </div>
+      )}
+
+{text === "Renew Your Policy" && (
+        <div
+          className={open ? `drop-down show` : "drop-down hide"}
+          onMouseEnter={() => setOpen(true)}
+          onMouseLeave={() => setOpen(false)}
+        >
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <ul style={{ display: "flex", flexDirection: "column" }}>
+              <li>Term Insurance</li>
+              <li>Saral Jeevan Bima</li>
+              <li>Life Insurance</li>
+              <li>1 Crore Term Insurance</li>
+              <li>Term Insurance Return of Premium</li>
+              <li>Term Insurance for Spouse</li>
+              <li>Term Insurance Calculator</li>
+              <li>Dedicated Claim Assistance</li>
+            </ul>
+            <ul style={{ display: "flex", flexDirection: "column" }}>
+              <li>Term Insurance</li>
+              <li>Saral Jeevan Bima</li>
+              <li>Life Insurance</li>
+              <li>1 Crore Term Insurance</li>
+              <li>Term Insurance Return of Premium</li>
+              <li>Term Insurance for Spouse</li>
+              <li>Term Insurance Calculator</li>
+              <li>Dedicated Claim Assistance</li>
+            </ul>
+            <ul style={{ display: "flex", flexDirection: "column" }}>
+              <li>Term Insurance</li>
+              <li>Saral Jeevan Bima</li>
+              <li>Life Insurance</li>
+              <li>1 Crore Term Insurance</li>
+              <li>Term Insurance Return of Premium</li>
+              <li>Term Insurance for Spouse</li>
+              <li>Term Insurance Calculator</li>
+              <li>Dedicated Claim Assistance</li>
+            </ul>
+          </div>
         </div>
       )}
     </>

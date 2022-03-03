@@ -1,5 +1,5 @@
 import React from "react";
-import { PageFooter } from "../Elements/Elements";
+import { PageFooter } from "../Elements/NavbarFooter";
 
 export const Footer = () => {
   return (

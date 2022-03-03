@@ -9,6 +9,7 @@
 body {
   font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
     "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 li {
@@ -193,6 +194,28 @@ li {
   margin-left: 5px;
   cursor: pointer;
 }
+
+/* Owl Carousel buttons */
+div.owl-nav {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+
+div.owl-nav span {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin: 1px;
+  background-color: #777;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.45;
+}
+
 
 @media screen and (max-width: 570px) {
   .form-container {
