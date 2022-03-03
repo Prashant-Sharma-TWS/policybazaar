@@ -11,15 +11,15 @@ export const Error = styled.div`
 
 export const Nav = styled.nav`
   width: 100%;
-  height: 70px;
+  height: 60px;
   position: sticky;
-  top: 0;
-  z-index: 10;
+  top: 0px;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 5px 100px;
+  padding: 10px 100px 0;
   background-color: #fff;
 
   ul {

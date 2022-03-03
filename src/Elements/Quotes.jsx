@@ -109,7 +109,8 @@ export const QuoteCard = styled.div`
 `;
 
 export const QuoteCompany = styled.div`
-  border-top: 1px solid;
+  border-top: 1px solid #ddd;
+
   > div {
     width: 85%;
     margin: auto;
@@ -178,6 +179,9 @@ export const QuoteCompany = styled.div`
           }
         }
       }
+    }
+
+    > div:nth-of-type(2) {
     }
   }
 `;
