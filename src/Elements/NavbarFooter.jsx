@@ -93,8 +93,7 @@ export const Nav = styled.nav`
       }
 
       .nitin {
-
-      } 
+      }
     }
   }
 
