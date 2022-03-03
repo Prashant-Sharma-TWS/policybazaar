@@ -14,6 +14,17 @@ export const InsuranceCard = styled.div`
     box-shadow: 0 1px 30px rgb(0 0 0 / 30%);
     border-radius: 20px;
 
+    > div:nth-of-type(1) {
+      position: relative;
+      height: 560px;
+      background: #e1edf4;
+      border-radius: 0 33% 100% 0/51% 43% 59% 26%;
+      width: 40%;
+      border-top-left-radius: 20px;
+      line-height: 1.5;
+      color: #212529;
+      padding: 30px 0 0 40px;
+    }
     > div:nth-of-type(2) {
       text-align: center;
       padding: 0 130px 0 0;
@@ -47,6 +58,60 @@ export const InsuranceCard = styled.div`
 
       .form-input {
         margin-top: 30px;
+
+        > div:nth-of-type(1) {
+          display: grid;
+          grid-template-columns: repeat(2, 47%);
+          justify-content: space-between;
+          align-items: center;
+          margin: 0 0 15px;
+
+          .male,
+          .female {
+            width: 100%;
+            height: 55px;
+            display: block;
+            position: relative;
+            color: #253858;
+            font-size: 16px;
+            font-weight: 400;
+            border-radius: 8px;
+            border: 1px solid #5e6c84;
+            line-height: 52px;
+            cursor: pointer;
+            background-color: orange;
+
+            input {
+              position: absolute;
+              right: 10px;
+              top: 0px;
+              width: 15px;
+              height: 15px;
+              border: solid #fff;
+              border-width: 0 1px 1px 0;
+              transform: rotate(45deg);
+              cursor: pointer;
+            }
+          }
+          .male:hover,
+          .female:hover {
+            border: 1px solid #0065ff;
+          }
+          .male {
+            background: url(https://static.pbcdn.in/term-cdn/images/images/psprite-icon.svg)
+              no-repeat;
+            background-position: 50px -178px;
+            background-size: 90px;
+            padding-left: 42px;
+          }
+          .female {
+            background: url(https://static.pbcdn.in/term-cdn/images/images/psprite-icon.svg)
+              no-repeat;
+            background-position: 44px -217px;
+            background-size: 82px;
+            padding-left: 46px;
+          }
+        }
 
         > div {
           position: relative;
@@ -91,6 +156,28 @@ export const InsuranceCard = styled.div`
           color: #fff;
           background: #fd4705;
           margin: 10px 0 16px;
+          > .right-arrow {
+            margin-left: 10px;
+            transform: rotate(225deg);
+          }
+        }
+        p {
+          width: 325px;
+          height: 26px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 12px 0 10px 40px;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 16px;
+          color: rgba(37, 56, 88, 0.7);
+          background: rgba(22, 177, 162, 0.10196078431372549);
+          border-radius: 8px;
+
+          > img {
+            margin-right: 5px;
+          }
         }
       }
     }
