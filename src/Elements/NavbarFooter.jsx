@@ -78,7 +78,7 @@ export const Nav = styled.nav`
       border-bottom-right-radius: 8px;
       border-bottom-left-radius: 8px;
       transform: translateY(5px);
-      transition: all 0.1s ease;
+      transition: all 0.7s ease;
     }
 
     .user-icon {
