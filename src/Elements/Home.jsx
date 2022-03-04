@@ -105,6 +105,7 @@ export const HomeTop = styled.div`
           display: inline-block;
           font-size: 14px;
           font-weight: 500;
+          margin-top: 10px;
           padding: 10px 20px;
           text-decoration: none;
           color: #fff;
@@ -212,7 +213,7 @@ export const CardContainer = styled.div`
     width: 120px;
     height: 100px;
     position: relative;
-    padding: 5px;
+    padding: 2px 5px 8px;
     text-align: center;
     color: #253858;
     border: none;

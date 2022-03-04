@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import { CardContainer, HomeTop } from "../../Elements/Home";
 import img1 from "../../Images/home/img1.png";
 import img2 from "../../Images/home/img2.png";
@@ -14,6 +14,8 @@ import img10 from "../../Images/home/img10.png";
 import img11 from "../../Images/home/img11.png";
 import img12 from "../../Images/home/img12.png";
 import img13 from "../../Images/home/img13.png";
+import img14 from "../../Images/home/img14.png";
+import { Insurance } from "../../Pages/Insurance";
 
 export const Top = () => {
   return (
@@ -84,7 +86,7 @@ export const Top = () => {
             img={img13}
             info="Covers covid-19"
           />
-          <Card title="Term Life Insurance" img={img1} info="Covers covid-19" />
+          <Card title="View All Products" img={img14} info="Covers covid-19" />
         </CardContainer>
       </div>
     </HomeTop>
@@ -124,17 +126,19 @@ const Card = ({ img, title, info }) => {
   const navigate = useNavigate();
 
   return (
-    <div
-      className="card"
-      onClick={() => {
-        navigate(`/policybazaar/${title}`);
-      }}
-    >
-      <div>
-        <img src={img} alt={title} />
-        <p>{title}</p>
+    <>
+      <div
+        className="card"
+        onClick={() => {
+          navigate(`/policybazaar/${title}`);
+        }}
+      >
+        <div>
+          <img src={img} alt={title} />
+          <p>{title}</p>
+        </div>
+        <div>{info}</div>
       </div>
-      <div>{info}</div>
-    </div>
+    </>
   );
 };
