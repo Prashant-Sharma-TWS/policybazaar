@@ -202,6 +202,7 @@ export const QuoteCompany = styled.div`
       justify-content: space-between;
 
       .filters {
+        position: relative;
         width: 100%;
         padding: 10px 10px;
         border-radius: 8px;
@@ -233,9 +234,6 @@ export const QuoteCompany = styled.div`
             outline: 1px solid lightblue;
             padding: 3px 8px;
           }
-        }
-        .filter-by-rupee {
-          width: ;
         }
         .toggle {
           .switch {
@@ -286,6 +284,23 @@ export const QuoteCompany = styled.div`
               border-radius: 50%;
             }
           }
+        }
+
+        .save-with-yearly {
+          background: url(https://termlife.policybazaar.com/price.b579aa467da2438c3944.png);
+          position: absolute;
+          width: 110px;
+          height: 24px;
+          background-size: contain;
+          left: 98%;
+          padding-left: 41px;
+          color: #15b5a5;
+          font-weight: 600;
+          line-height: 15px;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       }
 
@@ -444,6 +459,10 @@ export const QuoteCompany = styled.div`
           }
         }
       }
+    }
+
+    .sidebar-images {
+      padding-top: 50px;
     }
   }
 `;

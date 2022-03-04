@@ -17,7 +17,6 @@ const initialFilter = {
 
 export const Company = () => {
   const [companies, setCompanies] = useState([]);
-  const [query, setQuery] = useState("");
   const [currFilter, setCurrFilter] = useState(initialFilter);
 
   useEffect(() => {
@@ -40,7 +39,12 @@ export const Company = () => {
   const handleSwitch = (name, value) => {
     const newData = listOfInsuranceCompany.insurance.map((company) => {
       if (value === "on")
-        return { ...company, price: Math.round(company.price * 12 - (company.price * 12 * 5) / 100) };
+        return {
+          ...company,
+          price: Math.round(
+            company.price * 12 - (company.price * 12 * 5) / 100
+          ),
+        };
       return company;
     });
     setCompanies(newData);
@@ -146,10 +150,13 @@ export const Company = () => {
                 </label>
                 Pay Yearly
               </li>
+              <div className="save-with-yearly">
+                <p>Save 5%</p>
+              </div>
             </ul>
             <ListOfCompany companies={companies} />
           </div>
-          <div>
+          <div className="sidebar-images">
             <div>
               <img src={sideImage1} alt="sideImage1" />
             </div>
