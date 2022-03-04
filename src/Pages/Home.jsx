@@ -12,10 +12,8 @@ export const Home = () => {
       <Top />
       <SliderImage />
       <SecondSlider />
-
       <PBSection />
       <GetApp />
-
       <OurPartners />
     </div>
   );
