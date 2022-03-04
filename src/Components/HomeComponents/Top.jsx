@@ -1,7 +1,19 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { CardContainer, HomeTop } from "../../Elements/Home";
-// import icons from "../../Images/Icons/home-page-icons.svg";
+import img1 from "../../Images/home/img1.png";
+import img2 from "../../Images/home/img2.png";
+import img3 from "../../Images/home/img3.png";
+import img4 from "../../Images/home/img4.png";
+import img5 from "../../Images/home/img5.png";
+import img6 from "../../Images/home/img6.png";
+import img7 from "../../Images/home/img7.png";
+import img8 from "../../Images/home/img8.png";
+import img9 from "../../Images/home/img9.png";
+import img10 from "../../Images/home/img10.png";
+import img11 from "../../Images/home/img11.png";
+import img12 from "../../Images/home/img12.png";
+import img13 from "../../Images/home/img13.png";
 
 export const Top = () => {
   return (
@@ -25,11 +37,12 @@ export const Top = () => {
             </div>
           </div>
           <div>
-            <div>
+            <div className="akshay-image">
               <img
                 src="https://static.pbcdn.in/cdn/images/home-v1/pb-promise-new-1.png"
                 alt="akshay"
                 width="250px"
+                height="230px"
               />
             </div>
             <Slider />
@@ -38,76 +51,40 @@ export const Top = () => {
           <div className="for-slider-right"></div>
         </div>
         <CardContainer>
-          <Card
-            title="Term Life Insurance"
-            img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
-            info="Covers covid-19"
-          />
-          <Card
-            title="Health Insurance"
-            img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
-            info="Covers covid-19"
-          />
-          <Card
-            title="Investment Plans"
-            img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
-            info="Covers covid-19"
-          />
-          <Card
-            title="Car Insurance"
-            img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
-            info="Covers covid-19"
-          />
-          <Card
-            title="2 Wheeler Insurance"
-            img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
-            info="Covers covid-19"
-          />
+          <Card title="Term Life Insurance" img={img1} info="Covers covid-19" />
+          <Card title="Health Insurance" img={img2} info="Covers covid-19" />
+          <Card title="Investment Plans" img={img3} info="Covers covid-19" />
+          <Card title="Car Insurance" img={img4} info="Covers covid-19" />
+          <Card title="2 Wheeler Insurance" img={img5} info="Covers covid-19" />
           <Card
             title="Family Health Insurance"
-            img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+            img={img6}
             info="Covers covid-19"
           />
           <Card
             title="Guranteed Return Plan"
-            img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+            img={img7}
             info="Covers covid-19"
           />
-          <Card
-            title="Saral Jeevan Bima"
-            img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
-            info="Covers covid-19"
-          />
-          <Card
-            title="Travel Insurance"
-            img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
-            info="Covers covid-19"
-          />
+          <Card title="Saral Jeevan Bima" img={img8} info="Covers covid-19" />
+          <Card title="Travel Insurance" img={img9} info="Covers covid-19" />
           <Card
             title="Childs Savings Plans"
-            img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+            img={img10}
             info="Covers covid-19"
           />
-          <Card
-            title="Retirement Plans"
-            img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
-            info="Covers covid-19"
-          />
+          <Card title="Retirement Plans" img={img11} info="Covers covid-19" />
           <Card
             title="Group Health Insurance"
-            img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+            img={img12}
             info="Covers covid-19"
           />
           <Card
             title="1 Cr Health Insurance"
-            img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
+            img={img13}
             info="Covers covid-19"
           />
-          <Card
-            title="Term Life Insurance"
-            img="https://cdn-icons.flaticon.com/png/128/4436/premium/4436481.png?token=exp=1646168902~hmac=f73b200ea5202a9059e93e92ffe2af75"
-            info="Covers covid-19"
-          />
+          <Card title="Term Life Insurance" img={img1} info="Covers covid-19" />
         </CardContainer>
       </div>
     </HomeTop>

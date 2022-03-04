@@ -135,11 +135,11 @@ p {
   background-image: url("https://static.pbcdn.in/cdn/images/home-v1/logos@1x.png?v=24");
 }
 
-img {
+.logo-icon img {
   width: 130px;
   height: 68px;
   vertical-align: middle;
-}
+} 
 .logo-icon:hover {
   filter: grayscale(0%);
   opacity: 1;

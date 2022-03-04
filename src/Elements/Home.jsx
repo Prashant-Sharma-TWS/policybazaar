@@ -73,6 +73,10 @@ export const HomeTop = styled.div`
       background-color: #ffffff;
       z-index: -1;
     }
+    div.akshay-image img {
+     width: 250px;
+     height: 230px;
+    }
 
     .slider-parent {
       display: flex;
@@ -208,6 +212,7 @@ export const CardContainer = styled.div`
     width: 120px;
     height: 100px;
     position: relative;
+    padding: 5px;
     text-align: center;
     color: #253858;
     border: none;
@@ -219,8 +224,6 @@ export const CardContainer = styled.div`
       min-height: 100px;
     }
     img {
-      width: 28px;
-      height: 30px;
       margin: 10px 0 10px;
     }
     p {
