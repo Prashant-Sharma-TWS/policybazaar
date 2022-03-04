@@ -2,16 +2,10 @@
   background-color: #f7f9ff;
   display: flex;
   padding: 3em;
-  /* border: 2px solid red; */
-    width: 85%;
-    margin: 5em auto;
-    justify-content: space-between;
+  width: 90%;
+  margin: 5em auto;
+  justify-content: space-between;
 }
-.leftAppSec {
-  /* display: flex; */
-  /* flex-direction: column; */
-}
-
 
 .gATitle {
   font-size: 24px;
@@ -22,6 +16,7 @@
   display: block;
   width: 60px;
   height: 4px;
+  margin-top: 15px;
   background: #0065ff;
 }
 
@@ -83,19 +78,13 @@
 
 .rightAppSec {
   width: 50%;
-  /* border: 2px solid black; */
 }
 .rightAppSecImg {
-  /* max-width: 100%;
-  height: auto;*/
-  vertical-align: middle; 
-  /* border: 2px solid red; */
+  vertical-align: middle;
   height: fit-content;
   width: 100%;
 }
 
-
-.gAColor{
+.gAColor {
   background-color: #f7f9ff;
-
 }

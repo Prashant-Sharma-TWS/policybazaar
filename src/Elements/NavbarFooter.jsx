@@ -284,74 +284,70 @@ export const Nav = styled.nav`
 
 export const PageFooter = styled.footer`
   width: 100%;
-  padding-bottom: 100px;
+  padding: 50px 0;
   color: #ffffff;
   background-color: #03203c;
 
-  > div:nth-of-type(1) {
-    padding: 50px 100px;
-    @media screen and (max-width: 1050px) {
-      padding: 0 20%;
-    }
-    @media screen and (max-width: 770px) {
-      padding: 0 8%;
-    }
-    @media screen and (max-width: 570px) {
-      padding: 0 100px;
-    }
-  }
-
-  div:nth-of-type(1) div:nth-of-type(1) {
-    font-size: 24px;
-    font-weight: 600;
-  }
-
-  .more-products {
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: space-around;
-    align-items: stretch;
-    margin: 50px 0 20px;
-
-    @media screen and (max-width: 1050px) {
-      height: 700px;
-    }
-    @media screen and (max-width: 570px) {
-      height: 1400px;
+  > div {
+    > div:nth-of-type(1) {
+      width: 85%;
+      margin: auto;
     }
 
-    > div {
-      > p {
-        font-size: 16px;
-        font-weight: 500;
-        margin: 0 0 16px;
+    div:nth-of-type(1) div:nth-of-type(1) {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .more-products {
+      height: 350px;
+      line-height: 2rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: space-around;
+      align-items: stretch;
+      margin: 50px 0 20px;
+
+      @media screen and (max-width: 1050px) {
+        height: 700px;
+      }
+      @media screen and (max-width: 570px) {
+        height: 1400px;
       }
 
-      > div p {
+      > div {
+        > p {
+          font-size: 16px;
+          font-weight: 500;
+          margin: 0 0 16px;
+        }
+
+        > div p {
+          font-size: 14px;
+          font-weight: 400;
+          padding-left: 5px;
+          color: rgb(202, 200, 200);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .middle-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px 100px 10px;
+      background-color: #10385e;
+
+      > p {
         font-size: 14px;
-        padding-left: 5px;
+        margin-right: 5px;
         color: rgb(202, 200, 200);
         cursor: pointer;
       }
-    }
-  }
-
-  .middle-footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px 100px 10px;
-    background-color: #10385e;
-
-    > p {
-      font-size: 14px;
-      margin-right: 5px;
-      color: rgb(202, 200, 200);
-      cursor: pointer;
     }
   }
 `;

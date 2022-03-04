@@ -23,13 +23,11 @@ export const GetApp = () => {
           href="https://pbapp.onelink.me/8YTK?pid=mobile_hamburger&amp;c=mobile_hamburger_dropdown&amp;af_dp=pbapp%3A%2F%2Fpolicybazaar.com&amp;af_web_dp=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.policybazaar%26hl%3Den-GB%26pli%3D1"
           className={styles.gAGpay}
         >
-          j
         </a>
         <a
           href="https://pbapp.onelink.me/8YTK?pid=mobile_hamburger&amp;c=mobile_hamburger_dropdown&amp;af_dp=pbapp%3A%2F%2Fpolicybazaar.com&amp;af_web_dp=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.policybazaar%26hl%3Den-GB%26pli%3D1"
           className={styles.gAStore}
         >
-          k
         </a>
       </div>
       <div className={styles.rightAppSec}>

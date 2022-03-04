@@ -36,7 +36,6 @@ export const SliderImage = () => {
   };
   return (
     <div className={styles.slideContainer}>
-      {/* Starts */}
       <div className={styles.slideWrapper}>
         <OwlCarousel className={styles.sliderItems} {...options}>
           <div className={styles.item}>
@@ -53,7 +52,6 @@ export const SliderImage = () => {
           </div>
         </OwlCarousel>
       </div>
-      {/* Ends */}
     </div>
   );
 };
