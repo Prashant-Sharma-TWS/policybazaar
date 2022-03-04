@@ -6,18 +6,16 @@ import sideImage2 from "../Images/side-image-2.png";
 import sideImage3 from "../Images/side-image-3.png";
 import listOfInsuranceCompany from "../items.json";
 import { useEffect } from "react";
-
-const initialFilter = {
-  name: "",
-  amount: "",
-  age: "",
-  sort: "",
-  switch: "",
-};
+import { useDispatch, useSelector } from "react-redux";
+import {
+  updateUserDataRequest,
+  updateUserDataSuccess,
+} from "../Redux/Data/data.action";
 
 export const Company = () => {
+  const dispatch = useDispatch();
   const [companies, setCompanies] = useState([]);
-  const [currFilter, setCurrFilter] = useState(initialFilter);
+  const { data } = useSelector((state) => state.user);
 
   useEffect(() => {
     setCompanies(listOfInsuranceCompany.insurance);
@@ -25,7 +23,7 @@ export const Company = () => {
 
   const handleChange = (e) => {
     let { name, value } = e.target;
-    if (currFilter.switch === "on") value = "";
+    if (data.filter.switch === "on") value = "";
 
     if (name === "name") handleName(name, value);
     if (name === "amount") handleAmount(name, value);
@@ -33,7 +31,13 @@ export const Company = () => {
     if (name === "sort") handleSort(name, value);
     if (name === "switch") handleSwitch(name, value);
 
-    setCurrFilter({ ...currFilter, [name]: value });
+    dispatch(updateUserDataRequest());
+    dispatch(
+      updateUserDataSuccess({
+        filter: { ...data.filter, [name]: value },
+        card: { ...data.card },
+      })
+    );
   };
 
   const handleSwitch = (name, value) => {
@@ -102,13 +106,20 @@ export const Company = () => {
                   type="text"
                   placeholder="Search by name"
                   name="name"
+                  // value={data.filter.name}
                   onChange={handleChange}
                 />
               </li>
               <li className="line-in-middle"></li>
               <li className="filter-by-rupee">
                 Life Cover
-                <select name="amount" id="life-cover" onChange={handleChange}>
+                <select
+                  name="amount"
+                  id="life-cover"
+                  className="form-select"
+                  // value={data.filter.amount}
+                  onChange={handleChange}
+                >
                   <option value="45">45 Lac</option>
                   <option value="50">50 Lac</option>
                   <option value="55">55 Lac</option>
@@ -119,7 +130,13 @@ export const Company = () => {
               <li className="line-in-middle"></li>
               <li className="filter-by-age">
                 Cover till age
-                <select name="age" id="cover-till-age" onChange={handleChange}>
+                <select
+                  name="age"
+                  id="cover-till-age"
+                  className="form-select"
+                  // value={data.filter.age}
+                  onChange={handleChange}
+                >
                   <option value="45">45 yrs</option>
                   <option value="50">50 yrs</option>
                   <option value="55">55 yrs</option>
@@ -144,6 +161,7 @@ export const Company = () => {
                   <input
                     type="checkbox"
                     name="switch"
+                    checked={data.filter.switch}
                     onChange={handleChange}
                   />
                   <span className="slider round"></span>

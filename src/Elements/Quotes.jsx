@@ -207,7 +207,7 @@ export const QuoteCompany = styled.div`
         padding: 10px 10px;
         border-radius: 8px;
         display: grid;
-        grid-template-columns: 20% 1px 17% 1px 17% 1px 15% 1px 25%;
+        grid-template-columns: 20% 1px 17% 1px 19% 1px 15% 1px 25%;
         justify-content: space-around;
         text-align: center;
         font-size: 11px;
@@ -231,8 +231,31 @@ export const QuoteCompany = styled.div`
           input,
           input:focus {
             border: none;
-            outline: 1px solid lightblue;
+            outline: none;
             padding: 3px 8px;
+            background-color: transparent;
+            border-bottom: 1px solid lightblue;
+
+            ::placeholder {
+              color: white;
+            }
+          }
+        }
+        .filter-by-rupee, .filter-by-age {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          .form-select {
+            display: block;
+            width: 80px;
+            padding: 0rem 0rem 0rem 1rem;
+            font-size: 12px;
+            line-height: 1.4;
+            color: white;
+            background-color: #8294a6;
+            background-position: right 0.75rem center;
+            background-size: 10px 10px;
+            border: none;
           }
         }
         .toggle {

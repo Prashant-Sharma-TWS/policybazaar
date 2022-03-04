@@ -17,7 +17,7 @@ function App() {
         ? navigate("/policybazaar")
         : navigate(`${pathname}`);
     } else {
-      navigate("/policybazaar");
+      navigate(`${pathname}`);
     }
   }, [isUserLoggedIn, pathname, navigate]);
 

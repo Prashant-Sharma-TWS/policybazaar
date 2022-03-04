@@ -52,7 +52,6 @@ export const Best = () => {
                 src="https://static.pbcdn.in/cdn/images/home-v1/blank.gif"
                 loading="lazy"
                 alt="blank"
-                style="width: 1px; height: 1px"
               />
             </div>
             <div></div>
