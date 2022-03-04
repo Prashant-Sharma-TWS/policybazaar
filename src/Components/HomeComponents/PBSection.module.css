@@ -11,14 +11,14 @@
   font-weight: 500;
 }
 
-.lineForPB {
+/* .lineForPB {
   width: 50px;
   display: inline-block;
   height: 4px;
   margin-top: -10px;
   border: 2px solid #0065ff;
   background: #0065ff;
-}
+} */
 
 .pForPB {
   font-size: 16px;
