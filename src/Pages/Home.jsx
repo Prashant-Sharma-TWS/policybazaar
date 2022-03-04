@@ -1,4 +1,5 @@
 import React from "react";
+import { GetApp } from "../Components/HomeComponents/GetApp";
 import { OurPartners } from "../Components/HomeComponents/OurPartners";
 import { PBSection } from "../Components/HomeComponents/PBSection";
 import { SecondSlider } from "../Components/HomeComponents/SecondSlider";
@@ -13,6 +14,7 @@ export const Home = () => {
       <SecondSlider />
 
       <PBSection />
+      <GetApp />
 
       <OurPartners />
     </div>

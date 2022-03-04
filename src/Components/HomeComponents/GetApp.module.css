@@ -1,0 +1,101 @@
+.getAppContainer {
+  background-color: #f7f9ff;
+  display: flex;
+  padding: 3em;
+  /* border: 2px solid red; */
+    width: 85%;
+    margin: 5em auto;
+    justify-content: space-between;
+}
+.leftAppSec {
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+
+.gATitle {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.gALine {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #0065ff;
+}
+
+.gADescription {
+  color: #5e6c84;
+  font-size: 18px;
+  padding-bottom: 40px;
+  margin-top: 1em;
+}
+
+.gAlist > li::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url("https://static.pbcdn.in/cdn/images/webp/star-outline.webp")
+    no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  background-size: cover;
+  margin: 0 14px 0 -30px;
+}
+.gAlist > li {
+  list-style: none;
+  margin: 0 0 0 30px;
+  padding: 0 0 20px 0;
+  font-size: 14px;
+  color: #253858;
+}
+
+.gAdownload {
+  font-size: 14px;
+  line-height: 24px;
+  color: #505f79;
+  padding: 20px 0 20px;
+  display: block;
+}
+
+.gAGpay {
+  width: 170px;
+  height: 50px;
+  display: inline-block;
+  background: url("https://static.pbcdn.in/cdn/images/webp/store-logo.webp")
+    no-repeat;
+  background-size: cover;
+  margin-right: 20px;
+}
+
+.gAStore {
+  width: 170px;
+  height: 50px;
+  display: inline-block;
+  background: url("https://static.pbcdn.in/cdn/images/webp/store-logo.webp")
+    no-repeat;
+  background-size: cover;
+  margin-right: 20px;
+  margin-right: 0;
+  background-position: 0 -80px;
+}
+
+.rightAppSec {
+  width: 50%;
+  /* border: 2px solid black; */
+}
+.rightAppSecImg {
+  /* max-width: 100%;
+  height: auto;*/
+  vertical-align: middle; 
+  /* border: 2px solid red; */
+  height: fit-content;
+  width: 100%;
+}
+
+
+.gAColor{
+  background-color: #f7f9ff;
+
+}
