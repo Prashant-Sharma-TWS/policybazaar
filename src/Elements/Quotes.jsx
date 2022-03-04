@@ -5,7 +5,7 @@ export const QuoteCard = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 180;
     width: 100vw;
     height: 100vh;
     opacity: 0.8;
@@ -28,7 +28,7 @@ export const QuoteCard = styled.div`
     text-align: center;
     color: #212529;
     background-color: #fff;
-    z-index: 15;
+    z-index: 200;
     border-radius: 10px;
     animation: fade-in-backdrop 0.5s linear forwards;
     @keyframes fade-in-backdrop {
@@ -110,21 +110,27 @@ export const QuoteCard = styled.div`
 
 export const QuoteCompany = styled.div`
   border-top: 1px solid #ddd;
+  background-color: #eee;
 
-  > div {
-    width: 85%;
-    margin: auto;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 1.5;
-    color: #253858;
+  > div:nth-of-type(1) {
+    background-color: #ddd;
+    margin: 0 0 15px;
 
-    > div:nth-of-type(1) {
-      display: flex;
+    > div {
+      width: 85%;
+      margin: auto;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: #253858;
+      padding: 5px 0 10px;
+      display: grid;
+      grid-template-columns: 32% 32% 13%;
       justify-content: space-between;
       align-items: center;
 
       b {
+        margin-left: 5px;
         color: #0078fd;
       }
       input {
@@ -180,6 +186,15 @@ export const QuoteCompany = styled.div`
         }
       }
     }
+  }
+
+  > div:nth-of-type(2) {
+    width: 85%;
+    margin: auto;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #253858;
 
     > div:nth-of-type(2) {
       display: grid;
@@ -261,7 +276,97 @@ export const QuoteCompany = styled.div`
         font-weight: 500;
         line-height: 1.5;
         color: #212529;
-        background: #f4f5f7;
+        border-radius: 10px;
+        background: #fff;
+
+        > ul {
+          display: grid;
+          grid-template-columns: 18% 18% 18% 18% 24%;
+          justify-content: space-between;
+          text-align: center;
+          font-size: 11px;
+          line-height: 1.5;
+          color: #212529;
+
+          > li {
+            padding: 36px 0;
+          }
+
+          > li:nth-of-type(5) {
+            position: relative;
+            padding: 0px;
+
+            > div {
+              position: absolute;
+              top: 0;
+              right: 0;
+              left: 20%;
+              width: 80%;
+              border-radius: 0 8px 0 8px;
+              background: #f9ebeb;
+
+              > p:nth-of-type(1) {
+                border: 1px solid rgba(243, 80, 35, 0.2);
+                border-top: 0;
+                border-right: 0;
+                color: red;
+                font-weight: 500;
+                font-size: 11px;
+                padding: 1px 8px 2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+              > p:nth-of-type(2) {
+                font-weight: 500;
+                border: 1px solid rgba(243, 80, 35, 0.2);
+                border-radius: 0 0 0 8px;
+                background: #fff;
+                font-size: 10px;
+                border-top: 0;
+                border-right: 0;
+                color: rgba(37, 56, 88, 0.9);
+              }
+            }
+
+            > button {
+              transition: all 0.4s ease;
+              overflow: hidden;
+              margin-top: 0;
+              position: relative;
+              top: 38%;
+              font-size: 12px;
+              background: #f35023;
+              line-height: 36px;
+              color: #fff;
+              border: 0;
+              border-radius: 3px;
+              min-width: 140px;
+              cursor: pointer;
+              height: 36px;
+              text-align: center;
+              padding: 0 18px 0 5px;
+              transition-property: all;
+              transition-duration: 0.6s;
+              transition-timing-function: ease;
+
+              > i {
+                position: absolute;
+                pointer-events: none;
+                content: "";
+                top: 38%;
+                left: 65%;
+                width: 8px;
+                height: 8px;
+                border-width: 2px;
+                border-style: solid;
+                border-bottom: transparent;
+                border-left: transparent;
+                transform: rotate(40deg);
+              }
+            }
+          }
+        }
       }
     }
   }

@@ -12,6 +12,7 @@ export const Company = () => {
             Plans that Return my premium.(Opted by 23% Customers)
           </p>
           <p>
+            In my absence, my family will get the life cover
             <b>All at one go</b>
           </p>
           <p>
@@ -23,6 +24,8 @@ export const Company = () => {
             <b className="rotate-five"></b>
           </p>
         </div>
+      </div>
+      <div>
         <div>
           <div>
             <ul className="filters">
@@ -75,8 +78,27 @@ export const Company = () => {
 const ListOfCompany = () => {
   return (
     <div className="list-of-company">
-      <div></div>
-      <div></div>
+      <ul>
+        <li>
+          <img
+            src="https://static.pbcdn.in/term-cdn/images/images/insurer/kotak_logo.png"
+            alt=""
+          />
+          <p>Kotak Mahindra Life</p>
+        </li>
+        <li>30 Lac</li>
+        <li>65 yrs</li>
+        <li>98.5%</li>
+        <li>
+          <div>
+            <p>Limited Period Offer</p>
+            <p>Plans prices to increase soon</p>
+          </div>
+          <button>
+            ₹ 1258 <i></i>
+          </button>
+        </li>
+      </ul>
     </div>
   );
 };
