@@ -136,8 +136,8 @@ export const QuoteCompany = styled.div`
       input {
         margin-right: 5px;
       }
-      > p,
-      > p > p {
+      > div,
+      > div > p {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -196,25 +196,43 @@ export const QuoteCompany = styled.div`
     line-height: 1.5;
     color: #253858;
 
-    > div:nth-of-type(2) {
+    > div {
       display: grid;
       grid-template-columns: 69% 28%;
       justify-content: space-between;
 
       .filters {
         width: 100%;
+        padding: 10px 10px;
+        border-radius: 8px;
         display: grid;
-        grid-template-columns: 18% 18% 18% 18% 24%;
-        justify-content: space-between;
+        grid-template-columns: 20% 1px 17% 1px 17% 1px 15% 1px 25%;
+        justify-content: space-around;
         text-align: center;
         font-size: 11px;
+        background: #8294a6;
+
+        .line-in-middle {
+          width: 1px;
+          height: 85%;
+          background-color: #777;
+        }
 
         > li {
           display: flex;
           justify-content: space-around;
+          color: #eee;
+          font-size: 11px;
+          font-weight: 500;
         }
 
         .search-by-name {
+          input,
+          input:focus {
+            border: none;
+            outline: 1px solid lightblue;
+            padding: 3px 8px;
+          }
         }
         .filter-by-rupee {
           width: ;
@@ -276,23 +294,81 @@ export const QuoteCompany = styled.div`
         font-weight: 500;
         line-height: 1.5;
         color: #212529;
-        border-radius: 10px;
-        background: #fff;
+        padding-bottom: 50px;
 
         > ul {
           display: grid;
-          grid-template-columns: 18% 18% 18% 18% 24%;
+          grid-template-columns: 20% 1px 17% 1px 17% 1px 17% 1px 24%;
           justify-content: space-between;
           text-align: center;
-          font-size: 11px;
+          margin: 10px 0;
           line-height: 1.5;
           color: #212529;
+          border-radius: 10px;
+          background: #fff;
+
+          .line-in-middle {
+            width: 1px;
+            height: 85%;
+            background-color: #eee;
+          }
 
           > li {
+            font-size: 16px;
             padding: 36px 0;
+            color: #212529;
+          }
+
+          > li:nth-of-type(1) {
+            color: #757575;
+            font-size: 10px;
+            font-weight: 400;
+            position: relative;
+
+            > img {
+              width: 80%;
+            }
+            > p {
+              margin-top: 6px;
+            }
+            > p:nth-of-type(2) {
+              cursor: pointer;
+              position: absolute;
+              left: -25%;
+              bottom: 4px;
+              padding: 2px 0;
+              width: 100%;
+              font-size: 10px;
+              font-weight: 500;
+              color: #212529;
+            }
           }
 
           > li:nth-of-type(5) {
+            position: relative;
+
+            > p:nth-of-type(2) {
+              position: absolute;
+              background: #f4f5f7;
+              font-size: 10px;
+              font-weight: 600;
+              top: 82%;
+              left: -5%;
+              width: 110%;
+              text-align: center;
+              border-top-left-radius: 30px;
+              border-top-right-radius: 30px;
+              height: 20px;
+              color: #253858;
+
+              > img {
+                width: 14px;
+                margin-right: 3px;
+              }
+            }
+          }
+
+          > li:nth-of-type(9) {
             position: relative;
             padding: 0px;
 

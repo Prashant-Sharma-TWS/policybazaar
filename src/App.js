@@ -13,6 +13,10 @@ function App() {
 
   useEffect(() => {
     if (isUserLoggedIn) {
+      pathname === "/policybazaar"
+        ? navigate("/policybazaar")
+        : navigate(`${pathname}`);
+    } else {
       navigate("/policybazaar");
     }
   }, [isUserLoggedIn, pathname, navigate]);
