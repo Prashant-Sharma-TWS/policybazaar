@@ -9,7 +9,7 @@
 body {
   font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
     "Helvetica Neue", Arial, sans-serif;
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 li {
@@ -19,11 +19,9 @@ li {
 
 .show {
   display: block;
-  color: rgb(202, 200, 200);
 }
 .hide {
   display: none;
-  color: #10385e;
 }
 
 .sign-in-show {
@@ -32,7 +30,7 @@ li {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 150;
   display: block;
   background: #172b4d;
   animation: fade-in-backdrop 0.3s linear forwards;
@@ -203,8 +201,6 @@ div.owl-nav {
   gap: 10px;
 }
 
-
-
 div.owl-nav span {
   width: 10px;
   height: 10px;
@@ -215,7 +211,6 @@ div.owl-nav span {
   cursor: pointer;
   opacity: 0.45;
 }
-
 
 @media screen and (max-width: 570px) {
   .form-container {

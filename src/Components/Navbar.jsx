@@ -7,55 +7,63 @@ import userIcon from "../Images/Icons/user-icon.svg";
 import { SignIn } from "./SignIn";
 import { useDispatch } from "react-redux";
 import { logoutRequest, logoutSuccess } from "../Redux/Auth/auth.action";
-import styles from "./Nav.module.css";
 
 export const Navbar = () => {
   const { isUserLoggedIn } = useSelector((state) => state.auth);
   const [clickedSignIn, setClickedSignIn] = useState(false);
   const navigate = useNavigate();
+  const [hamburger, setHamburger] = useState(false);
 
   return (
     <>
       <Nav>
         <div>
-          <img
-            src={logo}
-            alt="policybazaar-logo"
-            onClick={() => navigate("/policybazaar")}
-          />
+          <div>
+            <div
+              className={hamburger ? "hamburger show-anime" : "hamburger"}
+              onClick={() => setHamburger(!hamburger)}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div>
+              <img
+                src={logo}
+                alt="policybazaar-logo"
+                onClick={() => navigate("/policybazaar")}
+              />
+            </div>
+            <ul>
+              <ListItem
+                text="Insurance Products"
+                arrowDown="arrow-down"
+                isUserLoggedIn={isUserLoggedIn}
+              />
+              <ListItem
+                text="Renew Your Policy"
+                arrowDown="arrow-down"
+                isUserLoggedIn={isUserLoggedIn}
+              />
+              <ListItem text="File a claim" isUserLoggedIn={isUserLoggedIn} />
+              <ListItem
+                text="Support"
+                arrowDown="arrow-down"
+                isUserLoggedIn={isUserLoggedIn}
+              />
+              {isUserLoggedIn ? (
+                <ListItem
+                  text="User"
+                  arrowDown="arrow-down"
+                  isUserLoggedIn={isUserLoggedIn}
+                  className="user"
+                />
+              ) : (
+                <button onClick={() => setClickedSignIn(true)}>Sign in</button>
+              )}
+            </ul>
+          </div>
         </div>
-        <ul>
-          <ListItem
-            text="Insurance Products"
-            arrowDown="arrow-down"
-            isUserLoggedIn={isUserLoggedIn}
-          />
-          <ListItem
-            text="Renew Your Policy"
-            arrowDown="arrow-down"
-            isUserLoggedIn={isUserLoggedIn}
-          />
-          <ListItem
-            text="File a claim"
-            arrowDown="arrow-down"
-            isUserLoggedIn={isUserLoggedIn}
-          />
-          <ListItem
-            text="Support"
-            arrowDown="arrow-down"
-            isUserLoggedIn={isUserLoggedIn}
-          />
-          {isUserLoggedIn ? (
-            <ListItem
-              text="User"
-              arrowDown="arrow-down"
-              isUserLoggedIn={isUserLoggedIn}
-              className="user"
-            />
-          ) : (
-            <button onClick={() => setClickedSignIn(true)}>Sign in</button>
-          )}
-        </ul>
       </Nav>
       <SignIn
         clickedSignIn={clickedSignIn}
@@ -85,11 +93,7 @@ const ListItem = ({ text, arrowDown, className, isUserLoggedIn }) => {
         )}
         <i className={arrowDown}></i>
       </li>
-      {/* <div className={open ? `drop-down show ${className}` : "drop-down hide"}>
-        <ul>
-          <li>{text}</li>
-        </ul>
-      </div> */}
+
       {text === "User" && (
         <div
           className={open ? `drop-down show ${className}` : "drop-down hide"}
@@ -115,487 +119,120 @@ const ListItem = ({ text, arrowDown, className, isUserLoggedIn }) => {
       {/* Drop down styles for other drop-down list inside navbar */}
       {text === "Insurance Products" && (
         <div
-          className={open ? `drop-down show nitin` : "drop-down hide"}
+          className={
+            open ? `drop-down show insurance-products` : "drop-down hide"
+          }
           onMouseEnter={() => setOpen(true)}
           onMouseLeave={() => setOpen(false)}
         >
-          <div className="ruby_grid ruby_grid_lined">
-            <div className="ruby_row">
-              <div className="ruby_col_3">
-                <h3 className="ruby_list_heading">
-                  <i className="menu_ico icon_bg life_insurance"></i>
-                  <a className="headlink" href="#">
-                    Life Insurance
-                  </a>
-                </h3>
-                <ul className="ul_li_ul">
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Term Insurance</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Saral Jeevan Bima</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Life Insurance</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>1 Crore Term Insurance</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Term Insurance Return of Premium</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Term Insurance for Spouse</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Term Insurance Calculator</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Dedicated Claim Assistance</span>
-                    </a>
-                  </li>
-                </ul>
-                <h3 className="ruby_list_heading mt_30">
-                  <i className="menu_ico icon_bg other_insurance"></i>
-                  <a className="headlink" href="#">
-                    Other Insurance
-                  </a>
-                </h3>
-                <ul className="ul_li_ul">
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Travel Insurance</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Group Health Insurance</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Home Insurance</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Pet Insurance</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Cancer Insurance</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Defence Personnel Insurance</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>General Insurance</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="h#">
-                      <span>Other General Insurance Products</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="ruby_col_3 hidden_md">
-                <h3 className="ruby_list_heading">
-                  <i className="menu_ico icon_bg investment_plans"></i>
-                  <a className="headlink" href="#">
-                    Investment Plans
-                  </a>
-                </h3>
-                <ul className="ul_li_ul">
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Child Plans</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Pension Plans</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>ULIP</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Money Back Policy</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Endowment Policy</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Tax Saving Investments</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Guaranteed Return Plans</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Capital Guarantee Plans</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Annuity Plans</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="ruby_col_3 hidden_md">
-                <h3 className="ruby_list_heading">
-                  <i className="menu_ico icon_bg health_insurance"></i>
-                  <a className="headlink" href="#">
-                    Health Insurance
-                  </a>
-                </h3>
-                <ul className="ul_li_ul">
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Family Health Insurance</span>
-                    </a>
-                  </li>
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Senior Citizen Health Insurance</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Health Insurance for Parents</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Coronavirus Health Insurance</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Arogya Sanjeevani Policy</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Critical Illness Insurance</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Mediclaim Policy</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Best Health Insurance Plans</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Health Insurance Claim</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Health Insurance Calculator</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="ruby_col_3 hidden_md">
-                <h3 className="ruby_list_heading">
-                  <i className="menu_ico icon_bg motor-insurance"></i>
-                  <a className="headlink" href="#">
-                    Car Insurance
-                  </a>
-                </h3>
-                <ul className="ul_li_ul">
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Motor Insurance</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Two Wheeler Insurance</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Commercial Vehicle Insurance</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Taxi Insurance</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Third Party Insurance</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Best Car Insurance Companies</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Used Car Insurance</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Pay As You Drive Insurance</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Third Party Bike Insurance</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>E-Bike Insurance</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Car Insurance Calculator</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Two Wheeler Insurance Calculator</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Car Insurance Claim</span>
-                    </a>
-                  </li>
-
-                  <li className="ul_li_ul_li">
-                    <a className="allmenu" href="#">
-                      <span>Motor Floater Insurance</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div>
+            <ul>
+              <h3>Life Insurance</h3>
+              <li>Term Insurance</li>
+              <li>Saral Jeevan Bima</li>
+              <li>Life Insurance</li>
+              <li>1 Crore Term Insurance</li>
+              <li>Term Insurance Return of Premium</li>
+              <li>Term Insurance for Spouse</li>
+              <li>Term Insurance Calculator</li>
+              <li>Dedicated Claim Assistance</li>
+            </ul>
+            <ul>
+              <h3>Other Insurance</h3>
+              <li>Travel Insurance</li>
+              <li>Group Health Insurance</li>
+              <li>Home Insurance</li>
+              <li>Pet Insurance</li>
+              <li>Cancer Insurance</li>
+              <li>Defence Personnel Insurance</li>
+              <li>General Insurance</li>
+              <li>Other General Insurance Products</li>
+            </ul>
+            <ul>
+              <h3>Investment Plans</h3>
+              <li>Child Plans</li>
+              <li>Pension Plans</li>
+              <li>ULIP</li>
+              <li>Money Back Policy</li>
+              <li>Endowment Policy</li>
+              <li>Tax Saving Investments</li>
+              <li>Guaranteed Return Plans</li>
+              <li>Capital Guarantee Plans</li>
+              <li>Annuity Plans</li>
+            </ul>
+            <ul>
+              <h3>Health Insurance</h3>
+              <li>Family Health Insurance</li>
+              <li>Senior Citizen Health Insurance</li>
+              <li>Health Insurance for Parents</li>
+              <li>Coronavirus Health Insurance</li>
+              <li>Arogya Sanjeevani Policy</li>
+              <li>Critical Illness Insurance</li>
+              <li>Mediclaim Policy</li>
+              <li>Best Health Insurance Plans</li>
+              <li>Health Insurance Claim</li>
+              <li>Health Insurance Calculator</li>
+            </ul>
+            <ul>
+              <h3>Car Insurance</h3>
+              <li>Motor Insurance</li>
+              <li>Two Wheeler Insurance</li>
+              <li>Commercial Vehicle Insurance</li>
+              <li>Taxi Insurance</li>
+              <li>Third Party Insurance</li>
+              <li>Best Car Insurance Companies</li>
+              <li>Used Car Insurance</li>
+              <li>Pay As You Drive Insurance</li>
+              <li>Third Party Bike Insurance</li>
+              <li>E-Bike Insurance</li>
+              <li>Car Insurance Calculator</li>
+              <li>Two Wheeler Insurance Calculator</li>
+              <li>Car Insurance Claim</li>
+              <li>Motor Floater Insurance</li>
+            </ul>
           </div>
         </div>
       )}
 
       {text === "Renew Your Policy" && (
         <div
-          className={open ? `drop-down show` : "drop-down hide"}
+          className={
+            open ? `drop-down show renew-your-policy` : "drop-down hide"
+          }
           onMouseEnter={() => setOpen(true)}
           onMouseLeave={() => setOpen(false)}
         >
-          <div>
-            <ul className="ul_li_ul">
-              <li className="ul_li_ul_li">
-                <a href="#" rel="nofollow">
-                  <span>
-                    <i className="menu_ico icon_bg renew_life_insurance"></i>
-                    Life Renewal
-                  </span>
-                </a>
-              </li>
-
-              <li className="ul_li_ul_li">
-                <a href="#" rel="nofollow">
-                  <span>
-                    <i className="menu_ico icon_bg renew-health-insurance"></i>
-                    Health Renewal
-                  </span>
-                </a>
-              </li>
-
-              <li className="ul_li_ul_li">
-                <a href="#" rel="nofollow">
-                  <span>
-                    <i className="menu_ico icon_bg renew-motor-insurance"></i>
-                    Motor Renewal
-                  </span>
-                </a>
-              </li>
-
-              <li className="ul_li_ul_li">
-                <a href="#" rel="nofollow">
-                  <span>
-                    <i className="menu_ico icon_bg renew-two-wheeler-insurance"></i>
-                    Two Wheeler Renewal
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <ul>
+            <li>Life Renewal</li>
+            <li>Health Renewal</li>
+            <li>Motor Renewal</li>
+            <li>Two Wheeler Renewal</li>
+          </ul>
         </div>
       )}
 
       {text === "Support" && (
         <div
-          className={open ? `drop-down show` : "drop-down hide"}
+          className={open ? `drop-down show support` : "drop-down hide"}
           onMouseEnter={() => setOpen(true)}
           onMouseLeave={() => setOpen(false)}
         >
-          <div>
-            <ul className="ul_li_ul support_ui">
-              <li className="policy-update hide"></li>
-
-              <li className="ul_li_ul_li">
-                <a className="redirectPolicy" href="#">
-                  <i className="menu_icon_bg urpolicy"></i>
-                  <span className="strong">
-                    Policies
-                    <span className="small-text">
-                      Sign in to view all your policies
-                    </span>
-                  </span>
-                </a>
-              </li>
-
-              <li className="ul_li_ul_li">
-                <a className="getHelp" href="#">
-                  <i className="menu_icon_bg raisequery"></i>
-                  <span className="strong"> Get help </span>
-                </a>
-              </li>
-
-              <li className="ul_li_ul_li">
-                <a href="#" rel="nofollow">
-                  <i className="menu_icon_bg verify-advisor"></i>
-                  <span className="strong">Verify your advisor</span>
-                </a>
-              </li>
-
-              <li className="ul_li_ul_li">
-                <a className="mcpUrl" href="#" rel="nofollow">
-                  <i className="menu_icon_bg mcp"></i>
-                  <span className="strong">
-                    Manage communication preferences
-                  </span>
-                </a>
-              </li>
-
-              <li className="ul_li_ul_li">
-                <span className="sapretor">Contact Us</span>
-              </li>
-
-              <li className="ul_li_ul_li">
-                <div className="wrap_with_icon">
-                  <a href="#">
-                    <i className="menu_icon_bg whatapp"></i>
-                    <span> Connect on Whatsapp </span>
-                  </a>
-                  <a href="#">
-                    <i className="menu_icon_bg nearme"></i>
-                    <span> Offline stores near you </span>
-                  </a>
-                  <a href="#">
-                    <i className="menu_icon_bg request-callback"></i>
-                    <span>Request a callback</span>
-                  </a>
-                </div>
-              </li>
-
-              <li className="ul_li_ul_li">
-                <a href="#">
-                  <i className="menu_icon_bg sales"></i>
-                  <p>Sales: 1800-208-8787</p>
-                </a>
-              </li>
-
-              <li className="ul_li_ul_li">
-                <a href="#">
-                  <i className="menu_icon_bg service"></i>
-                  <p>Service: 1800-258-5970</p>
-                </a>
-              </li>
-
-              <li className="ul_li_ul_li" className="hide-nri">
-                <a href="#">
-                  <i className="menu_icon_bg call"></i>
-                  <p>
-                    Helpline: +91-124-6656507
-                    <br />
-                    <span className="strong">10 AM to 7 PM (IST)</span>
-                  </p>
-                </a>
-              </li>
-              <li className="ul_li_ul_li">
-                <a href="#">
-                  <i className="menu_icon_bg claim"></i>
-                  <span> Claims: 1800-258-5881 </span>
-                </a>
-              </li>
-
-              <li className="ul_li_ul_li">
-                <a href="#">
-                  <i className="menu_icon_bg viewmore"></i>
-                  <p>View more</p>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <ul>
+            <li>Policies</li>
+            <li>Get help</li>
+            <li>Verify your advisor</li>
+            <li>Manage communication preferences</li>
+            <li>Contact Us</li>
+            <li>Sales: 1800-208-8787</li>
+            <li>Service: 1800-258-5970</li>
+            <li>
+              Helpline: +91-124-6656507
+              <br />
+              10 AM to 7 PM (IST)
+            </li>
+            <li>Claims: 1800-258-5881</li>
+            <li>View more</li>
+          </ul>
         </div>
       )}
     </>

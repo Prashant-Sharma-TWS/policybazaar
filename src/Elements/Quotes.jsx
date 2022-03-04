@@ -182,6 +182,87 @@ export const QuoteCompany = styled.div`
     }
 
     > div:nth-of-type(2) {
+      display: grid;
+      grid-template-columns: 69% 28%;
+      justify-content: space-between;
+
+      .filters {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 18% 18% 18% 18% 24%;
+        justify-content: space-between;
+        text-align: center;
+        font-size: 11px;
+
+        > li {
+          display: flex;
+          justify-content: space-around;
+        }
+
+        .search-by-name {
+        }
+        .filter-by-rupee {
+          width: ;
+        }
+        .toggle {
+          .switch {
+            position: relative;
+            display: inline-block;
+            width: 20px;
+            height: 12px;
+            input {
+              opacity: 0;
+              width: 0;
+              height: 0;
+            }
+
+            .slider {
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: #ccc;
+              transition: 0.4s;
+            }
+            .slider:before {
+              position: absolute;
+              content: "";
+              height: 5px;
+              width: 5px;
+              left: 4px;
+              bottom: 4px;
+              background-color: white;
+              -webkit-transition: 0.4s;
+              transition: 0.4s;
+            }
+            input:checked + .slider {
+              background-color: #2196f3;
+            }
+            input:focus + .slider {
+              box-shadow: 0 0 1px #2196f3;
+            }
+            input:checked + .slider:before {
+              transform: translateX(8px);
+            }
+            .slider.round {
+              border-radius: 5px;
+            }
+            .slider.round:before {
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+
+      .list-of-company {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #212529;
+        background: #f4f5f7;
+      }
     }
   }
 `;
