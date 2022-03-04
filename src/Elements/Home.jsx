@@ -1,14 +1,20 @@
 import styled from "styled-components";
 
 export const HomeTop = styled.div`
-  margin: 0 0 10px;
-  padding: 0 100px;
+  > div {
+    width: 85%;
+    margin: auto;
+  }
 
   .top-viewport {
     min-height: 293px;
     display: grid;
     grid-template-columns: repeat(2, 50%);
     align-items: center;
+
+    @media screen and (max-width: 750px) {
+      display: none;
+    }
 
     > div:nth-of-type(1) {
       h1 {
@@ -28,13 +34,28 @@ export const HomeTop = styled.div`
       div span:nth-of-type(1) {
         display: grid;
         grid-template-columns: 20% 60%;
+        align-items: center;
         color: #776bfd;
       }
       div span:nth-of-type(2) {
         display: grid;
         grid-template-columns: 20% 40%;
+        grid-template-rows: 60px;
+        align-items: center;
         color: #ff9b2c;
       }
+    }
+    .first-svg {
+      width: 30px;
+      height: 30px;
+      background: url(https://static.pbcdn.in/cdn/images/svg/home-page-icons.svg?v=6)
+        0 0;
+    }
+    .second-svg {
+      width: 30px;
+      height: 58px;
+      background: url(https://static.pbcdn.in/cdn/images/svg/home-page-icons.svg?v=6)
+        0 -30px;
     }
 
     .for-slider-left {
@@ -51,6 +72,10 @@ export const HomeTop = styled.div`
       right: 0;
       background-color: #ffffff;
       z-index: -1;
+    }
+    div.akshay-image img {
+     width: 250px;
+     height: 230px;
     }
 
     .slider-parent {
@@ -80,6 +105,7 @@ export const HomeTop = styled.div`
           display: inline-block;
           font-size: 14px;
           font-weight: 500;
+          margin-top: 10px;
           padding: 10px 20px;
           text-decoration: none;
           color: #fff;
@@ -187,6 +213,7 @@ export const CardContainer = styled.div`
     width: 120px;
     height: 100px;
     position: relative;
+    padding: 2px 5px 8px;
     text-align: center;
     color: #253858;
     border: none;
@@ -198,8 +225,6 @@ export const CardContainer = styled.div`
       min-height: 100px;
     }
     img {
-      width: 28px;
-      height: 30px;
       margin: 10px 0 10px;
     }
     p {
