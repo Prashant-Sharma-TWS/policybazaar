@@ -11,6 +11,8 @@ export const PBSection = () => {
     <div className={styles.pbContainer}>
       <h2 className={styles.pbh2}>PB Advantage</h2>
       <span className={styles.lineForPB}></span>
+      <span className={styles.gALine}></span>
+
       <p className={styles.pForPB}>
         When you buy insurance from us, you get more than just financial safety.
         You also get: our promise of simplifying complex insurance terms and

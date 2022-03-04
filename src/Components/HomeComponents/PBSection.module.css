@@ -1,6 +1,6 @@
-.pbContainer{
-    width: 85%;
-    margin: 5em auto;
+.pbContainer {
+  width: 85%;
+  margin: 5em auto;
 }
 
 .pbh2 {
@@ -37,7 +37,7 @@
 /* Styles for Zoom on Hover */
 
 .pbZoomWrapper {
-    margin: 3em 0;
+  margin: 3em 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -77,4 +77,18 @@
   height: 100px;
   width: 80px;
   margin-bottom: 0.5em;
+}
+
+.pbZoomHeading:hover {
+  font-size: 25px;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+
+.gALine {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #0065ff;
 }
