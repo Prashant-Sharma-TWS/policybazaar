@@ -3,19 +3,17 @@
   display: flex;
   padding: 3em;
   /* border: 2px solid red; */
-    width: 85%;
-    margin: 5em auto;
-    justify-content: space-between;
+  width: 85%;
+  margin: 5em auto;
+  justify-content: space-between;
 }
-.leftAppSec {
-  /* display: flex; */
-  /* flex-direction: column; */
-}
-
 
 .gATitle {
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 30px;
+  line-height: 30px;
+  padding: 0;
+  margin: 0 0 20px 0;
+  /* font-weight: 500; */
 }
 
 .gALine {
@@ -88,14 +86,12 @@
 .rightAppSecImg {
   /* max-width: 100%;
   height: auto;*/
-  vertical-align: middle; 
+  vertical-align: middle;
   /* border: 2px solid red; */
   height: fit-content;
   width: 100%;
 }
 
-
-.gAColor{
+.gAColor {
   background-color: #f7f9ff;
-
 }

@@ -18,7 +18,7 @@ export const Quotes = () => {
 
   useEffect(() => {
     if (card.left !== 0) {
-      setCard({ ...card, show: true });
+      setCard({ ...card, show: false });
     }
   }, []);
 

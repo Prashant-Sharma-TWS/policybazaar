@@ -11,7 +11,7 @@ export const Routers = () => {
     <>
       <Routes>
         <Route path="/policybazaar" element={<Home />} />
-        <Route path="/policybazaar/dashboard" element={<Dashboard />} />
+        {/* <Route path="/policybazaar/dashboard" element={<Dashboard />} /> */}
         <Route
           path="/policybazaar/Term%20Life%20Insurance"
           element={<Insurance />}
