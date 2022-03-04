@@ -12,8 +12,7 @@ const initialFilter = {
   amount: "",
   age: "",
   sort: "",
-  payMonthly: "",
-  payYearly: "",
+  switch: "",
 };
 
 export const Company = () => {
@@ -23,11 +22,49 @@ export const Company = () => {
 
   useEffect(() => {
     setCompanies(listOfInsuranceCompany.insurance);
-    console.log(query);
-  }, [companies, query]);
+  }, []);
 
   const handleChange = (e) => {
-    setQuery(e.target.value);
+    let { name, value } = e.target;
+    if (currFilter.switch === "on") value = "";
+
+    if (name === "name") handleName(name, value);
+    if (name === "amount") handleAmount(name, value);
+    if (name === "age") handleAge(name, value);
+    if (name === "sort") handleSort(name, value);
+    if (name === "switch") handleSwitch(name, value);
+
+    setCurrFilter({ ...currFilter, [name]: value });
+  };
+
+  const handleSwitch = (name, value) => {
+    const newData = listOfInsuranceCompany.insurance.map((company) => {
+      if (value === "on")
+        return { ...company, price: Math.round(company.price * 12 - (company.price * 12 * 5) / 100) };
+      return company;
+    });
+    setCompanies(newData);
+  };
+  const handleSort = (name, value) => {
+    // sort here
+  };
+  const handleAge = (name, value) => {
+    const newData = listOfInsuranceCompany.insurance.filter(
+      (company) => company.till === value
+    );
+    setCompanies(newData);
+  };
+  const handleName = (name, value) => {
+    const newData = listOfInsuranceCompany.insurance.filter((company) =>
+      company.name.toLowerCase().includes(value.toLowerCase())
+    );
+    setCompanies(newData);
+  };
+  const handleAmount = (name, value) => {
+    const newData = listOfInsuranceCompany.insurance.filter(
+      (company) => company.lifeCover === value
+    );
+    setCompanies(newData);
   };
 
   return (
@@ -57,16 +94,17 @@ export const Company = () => {
           <div>
             <ul className="filters">
               <li className="search-by-name">
-                <input type="text" placeholder="Search by name" />
+                <input
+                  type="text"
+                  placeholder="Search by name"
+                  name="name"
+                  onChange={handleChange}
+                />
               </li>
               <li className="line-in-middle"></li>
               <li className="filter-by-rupee">
                 Life Cover
-                <select
-                  name="life-cover"
-                  id="life-cover"
-                  onChange={() => handleChange}
-                >
+                <select name="amount" id="life-cover" onChange={handleChange}>
                   <option value="45">45 Lac</option>
                   <option value="50">50 Lac</option>
                   <option value="55">55 Lac</option>
@@ -77,11 +115,7 @@ export const Company = () => {
               <li className="line-in-middle"></li>
               <li className="filter-by-age">
                 Cover till age
-                <select
-                  name="cover-till-age"
-                  id="cover-till-age"
-                  onChange={() => handleChange}
-                >
+                <select name="age" id="cover-till-age" onChange={handleChange}>
                   <option value="45">45 yrs</option>
                   <option value="50">50 yrs</option>
                   <option value="55">55 yrs</option>
@@ -90,7 +124,11 @@ export const Company = () => {
                 </select>
               </li>
               <li className="line-in-middle"></li>
-              <li className="filter-by-claim">
+              <li
+                className="filter-by-claim"
+                name="sort"
+                onClick={handleChange}
+              >
                 Claim Settled
                 <BsArrowUp />
                 <BsArrowDown />
@@ -99,7 +137,11 @@ export const Company = () => {
               <li className="toggle">
                 Pay Monthly
                 <label className="switch">
-                  <input type="checkbox" />
+                  <input
+                    type="checkbox"
+                    name="switch"
+                    onChange={handleChange}
+                  />
                   <span className="slider round"></span>
                 </label>
                 Pay Yearly
@@ -108,9 +150,15 @@ export const Company = () => {
             <ListOfCompany companies={companies} />
           </div>
           <div>
-            <div><img src={sideImage1} alt="" /></div>
-            <div><img src={sideImage2} alt="" /></div>
-            <div><img src={sideImage3} alt="" /></div>
+            <div>
+              <img src={sideImage1} alt="sideImage1" />
+            </div>
+            <div>
+              <img src={sideImage2} alt="sideImage2" />
+            </div>
+            <div>
+              <img src={sideImage3} alt="sideImage3" />
+            </div>
           </div>
         </div>
       </div>
@@ -136,10 +184,10 @@ const ListOfCompany = ({ companies }) => {
               </p>
             </li>
             <li className="line-in-middle"></li>
-            <li>{company.lifeCover}</li>
+            <li>{company.lifeCover} Lac</li>
             <li className="line-in-middle"></li>
             <li>
-              <p>{company.till}</p>
+              <p>{company.till} yrs</p>
               <p>
                 <img
                   src="https://termlife.policybazaar.com/assets/images/Physical_medi.svg"
@@ -149,7 +197,7 @@ const ListOfCompany = ({ companies }) => {
               </p>
             </li>
             <li className="line-in-middle"></li>
-            <li>{company.claimchance}</li>
+            <li>{company.claimchance}%</li>
             <li className="line-in-middle"></li>
             <li>
               <div>
@@ -157,7 +205,7 @@ const ListOfCompany = ({ companies }) => {
                 <p>Plans prices to increase soon</p>
               </div>
               <button>
-                {company.price} <i></i>
+                ₹ {company.price} <i></i>
               </button>
             </li>
           </ul>
