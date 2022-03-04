@@ -7,9 +7,11 @@ import icon4 from "../../Images/scaler-images/slide-image-4.png";
 import icon5 from "../../Images/scaler-images/slide-image-5.png";
 export const PBSection = () => {
   return (
-      <div className={styles.pbContainer }>
+    <div className={styles.pbContainer}>
       <h2 className={styles.pbh2}>PB Advantage</h2>
-      <hr className={styles.lineForPB} />
+      {/* <hr className={styles.lineForPB} /> */}
+      <span className={styles.gALine}></span>
+
       <p className={styles.pForPB}>
         When you buy insurance from us, you get more than just financial safety.
         You also get: our promise of simplifying complex insurance terms and

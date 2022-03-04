@@ -83,3 +83,10 @@
   padding: 0;
   margin: 0;
 }
+
+.gALine {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #0065ff;
+}
