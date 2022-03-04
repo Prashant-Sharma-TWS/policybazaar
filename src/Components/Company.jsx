@@ -41,7 +41,7 @@ export const Company = () => {
   };
 
   const handleSwitch = (name, value) => {
-    const newData = listOfInsuranceCompany.insurance.map((company) => {
+    const newData = companies.map((company) => {
       if (value === "on")
         return {
           ...company,
@@ -57,19 +57,19 @@ export const Company = () => {
     // sort here
   };
   const handleAge = (name, value) => {
-    const newData = listOfInsuranceCompany.insurance.filter(
+    const newData = companies.filter(
       (company) => company.till === value
     );
     setCompanies(newData);
   };
   const handleName = (name, value) => {
-    const newData = listOfInsuranceCompany.insurance.filter((company) =>
+    const newData = companies.filter((company) =>
       company.name.toLowerCase().includes(value.toLowerCase())
     );
     setCompanies(newData);
   };
   const handleAmount = (name, value) => {
-    const newData = listOfInsuranceCompany.insurance.filter(
+    const newData = companies.filter(
       (company) => company.lifeCover === value
     );
     setCompanies(newData);
@@ -172,6 +172,7 @@ export const Company = () => {
                 <p>Save 5%</p>
               </div>
             </ul>
+            {!companies.length && <button>Reset</button>}
             <ListOfCompany companies={companies} />
           </div>
           <div className="sidebar-images">
