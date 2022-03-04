@@ -5,6 +5,8 @@ import { PBSection } from "../Components/HomeComponents/PBSection";
 import { SecondSlider } from "../Components/HomeComponents/SecondSlider";
 import { SliderImage } from "../Components/HomeComponents/SliderImage";
 import { Top } from "../Components/HomeComponents/Top";
+import { Investors } from "../Components/HomeComponents/Investors";
+
 
 export const Home = () => {
   return (
@@ -15,6 +17,7 @@ export const Home = () => {
       <PBSection />
       <GetApp />
       <OurPartners />
+      <Investors />
     </div>
   );
 };
