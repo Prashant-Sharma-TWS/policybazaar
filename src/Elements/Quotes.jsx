@@ -241,7 +241,8 @@ export const QuoteCompany = styled.div`
             }
           }
         }
-        .filter-by-rupee, .filter-by-age {
+        .filter-by-rupee,
+        .filter-by-age {
           display: flex;
           justify-content: space-around;
           align-items: center;
@@ -487,5 +488,19 @@ export const QuoteCompany = styled.div`
     .sidebar-images {
       padding-top: 50px;
     }
+  }
+
+  .reset-companies {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background: #0663f6;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
   }
 `;

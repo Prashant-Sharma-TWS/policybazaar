@@ -57,9 +57,7 @@ export const Company = () => {
     // sort here
   };
   const handleAge = (name, value) => {
-    const newData = companies.filter(
-      (company) => company.till === value
-    );
+    const newData = companies.filter((company) => company.till === value);
     setCompanies(newData);
   };
   const handleName = (name, value) => {
@@ -69,10 +67,12 @@ export const Company = () => {
     setCompanies(newData);
   };
   const handleAmount = (name, value) => {
-    const newData = companies.filter(
-      (company) => company.lifeCover === value
-    );
+    const newData = companies.filter((company) => company.lifeCover === value);
     setCompanies(newData);
+  };
+
+  const handleReset = () => {
+    setCompanies(listOfInsuranceCompany.insurance);
   };
 
   return (
@@ -172,7 +172,11 @@ export const Company = () => {
                 <p>Save 5%</p>
               </div>
             </ul>
-            {!companies.length && <button>Reset</button>}
+            {!companies.length && (
+              <button className="reset-companies" onClick={handleReset}>
+                Reset
+              </button>
+            )}
             <ListOfCompany companies={companies} />
           </div>
           <div className="sidebar-images">
@@ -230,7 +234,7 @@ const ListOfCompany = ({ companies }) => {
                 <p>Limited Period Offer</p>
                 <p>Plans prices to increase soon</p>
               </div>
-              <button>
+              <button onClick={() => {}}>
                 ₹ {company.price} <i></i>
               </button>
             </li>
