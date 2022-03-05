@@ -16,6 +16,7 @@ import img12 from "../../Images/home/img12.png";
 import img13 from "../../Images/home/img13.png";
 import img14 from "../../Images/home/img14.png";
 import { SmallScreen } from "./SmallScreen";
+import { Akshay } from "./Akshay";
 
 export const Top = () => {
   return (
@@ -50,7 +51,10 @@ export const Top = () => {
                 height="230px"
               />
             </div>
-            <Slider />
+            {/* <Slider /> */}
+            <div className="akshay-slider">
+              <Akshay />
+            </div>
           </div>
           <div className="for-slider-left"></div>
           <div className="for-slider-right"></div>
@@ -96,34 +100,34 @@ export const Top = () => {
   );
 };
 
-const Slider = () => {
-  return (
-    <div className="slider-parent">
-      <div className="slider-child">
-        <span>Health Insurance</span>
-        <h3>Save tax upto ₹ 75,000</h3>
-        <p>under sec 80D</p>
-        <button>Buy now</button>
-      </div>
-      <div className="slider-child">
-        <span>Investment Plans</span>
-        <h3>Save tax upto ₹ 46,800</h3>
-        <p>
-          under sec 80C &amp; <b>no tax on returns*</b>
-        </p>
-        <button>Buy now</button>
-      </div>
-      <div className="slider-child">
-        <span>Employee Insurance</span>
-        <h3>Custum plans at just</h3>
-        <p>
-          <b>₹ 57 per employee*</b>
-        </p>
-        <button>Buy now</button>
-      </div>
-    </div>
-  );
-};
+// const Slider = () => {
+//   return (
+//     <div className="slider-parent">
+//       <div className="slider-child">
+//         <span>Health Insurance</span>
+//         <h3>Save tax upto ₹ 75,000</h3>
+//         <p>under sec 80D</p>
+//         <button>Buy now</button>
+//       </div>
+//       <div className="slider-child">
+//         <span>Investment Plans</span>
+//         <h3>Save tax upto ₹ 46,800</h3>
+//         <p>
+//           under sec 80C &amp; <b>no tax on returns*</b>
+//         </p>
+//         <button>Buy now</button>
+//       </div>
+//       <div className="slider-child">
+//         <span>Employee Insurance</span>
+//         <h3>Custum plans at just</h3>
+//         <p>
+//           <b>₹ 57 per employee*</b>
+//         </p>
+//         <button>Buy now</button>
+//       </div>
+//     </div>
+//   );
+// };
 
 const Card = ({ img, title, info }) => {
   const navigate = useNavigate();

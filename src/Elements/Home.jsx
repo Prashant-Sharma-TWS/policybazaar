@@ -19,9 +19,18 @@ export const HomeTop = styled.div`
 
   .top-viewport {
     min-height: 293px;
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 50%);
     align-items: center;
+
+    .akshay-slider {
+      position: absolute;
+      width: 310px;
+      height: 400px;
+      top: 15%;
+      right: 0;
+    }
 
     @media screen and (max-width: 750px) {
       display: none;
