@@ -22,14 +22,12 @@ export const GetApp = () => {
               <li>Download your policy with a single tap</li>
             </ul>
             <span className={styles.text}>Download our app from</span>
-            <a
-              href="https://pbapp.onelink.me/8YTK?pid=mobile_hamburger&amp;c=mobile_hamburger_dropdown&amp;af_dp=pbapp%3A%2F%2Fpolicybazaar.com&amp;af_web_dp=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.policybazaar%26hl%3Den-GB%26pli%3D1"
+            <span
               className={`${styles.play_store} ${styles.googleplay} ${styles.download_app1}`}
-            ></a>
-            <a
-              href="https://pbweb.onelink.me/4ChW?pid=direct&amp;c=home-app-abff"
+            ></span>
+            <span
               className={`${styles.play_store} ${styles.ios} ${styles.install_now}`}
-            ></a>
+            ></span>
           </div>
           <div className={styles.mobile}>
             <img
@@ -40,7 +38,7 @@ export const GetApp = () => {
             />
           </div>
         </div>
-        <div className={styles.gAColor}>
+        {/* <div className={styles.gAColor}>
           <div className={styles.getAppContainer}>
             <div className={styles.leftAppSec}>
               <p className={styles.gATitle}>
@@ -74,7 +72,7 @@ export const GetApp = () => {
               ></img>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

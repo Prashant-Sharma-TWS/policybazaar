@@ -16,13 +16,13 @@ body {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 85%;
   padding: 0;
   transition: all 0.4s ease-in;
 }
 
 .container {
-  width: 1170px;
+  width: 85%;
   position: relative;
 }
 
