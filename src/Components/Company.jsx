@@ -36,10 +36,11 @@ export const Company = () => {
       updateUserDataSuccess({
         filter: { ...data.filter, [name]: value },
         card: { ...data.card },
+        plan: { ...data.plan },
       })
     );
   };
-  console.log(companies);
+
   const handleSwitch = (name, value) => {
     const newData = companies.map((company) => {
       if (value === "on") {
@@ -163,7 +164,7 @@ export const Company = () => {
                   <input
                     type="checkbox"
                     name="switch"
-                    checked={data.filter.switch}
+                    // checked={data.filter.switch}
                     onChange={handleChange}
                   />
                   <span className="slider round"></span>
@@ -199,8 +200,10 @@ export const Company = () => {
 };
 
 const ListOfCompany = ({ companies }) => {
+  const dispatch = useDispatch();
   const { pathname } = useLocation();
   const navigate = useNavigate();
+  const { data } = useSelector((state) => state.user);
 
   return (
     <div className="list-of-company">
@@ -240,7 +243,17 @@ const ListOfCompany = ({ companies }) => {
                 <p>Plans prices to increase soon</p>
               </div>
               <button
-                onClick={() => navigate(`${pathname}/${company.id}/payments`)}
+                onClick={(e) => {
+                  dispatch(updateUserDataRequest());
+                  dispatch(
+                    updateUserDataSuccess({
+                      filter: { ...data.filter },
+                      card: { ...data.card },
+                      plan: { amount: e.target.innerText.split(" ")[1] },
+                    })
+                  );
+                  navigate(`${pathname}/${company.id}/payments`);
+                }}
               >
                 ₹ {company.price} <i></i>
               </button>

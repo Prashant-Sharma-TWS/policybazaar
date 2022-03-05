@@ -3,10 +3,12 @@ import { useParams } from "react-router-dom";
 import { PaymentDiv } from "../Elements/Quotes";
 import listOfInsuranceCompany from "../items.json";
 import leftSideImg from "../Images/payments/payment-left-sidebar-image.png";
+import { useSelector } from "react-redux";
 
 export const Payments = () => {
   const [plan, setPlan] = useState();
   const params = useParams();
+  const { data } = useSelector((state) => state.user);
 
   useEffect(() => {
     listOfInsuranceCompany.insurance.forEach((company) =>
@@ -45,7 +47,9 @@ export const Payments = () => {
               <div>
                 <label>Mode of Premium Payment</label>
                 <select className="select-label">
-                  <option value="1">Monthly</option>
+                  <option value="">
+                    {data.plan.amount < 5000 ? "Monthly" : "Yearly"}
+                  </option>
                 </select>
               </div>
               <div>
@@ -71,22 +75,37 @@ export const Payments = () => {
               <div>
                 <label>Occupation</label>
                 <select className="select-label">
-                  <option value="Salaried">Salaried</option>
-                  <option value="Self Employed">Self Employed</option>
+                  {data.card.occupation === "Salaried" ? (
+                    <>
+                      <option value="Salaried" selected>
+                        Salaried
+                      </option>
+                      <option value="Self Employed">Self Employed</option>
+                    </>
+                  ) : (
+                    <>
+                      <option value="Salaried">Salaried</option>
+                      <option value="Self Employed" selected>
+                        Self Employed
+                      </option>
+                    </>
+                  )}
                 </select>
               </div>
               <div>
                 <label>Education</label>
                 <select className="select-label">
-                  <option value="Graduation">Graduation &amp; above</option>
-                  <option value="12th">12th</option>
+                  <option value="">Graduation &amp; above</option>
+                  <option value="12th" selected>
+                    12th
+                  </option>
                   <option value="10th">10th &amp; below</option>
                 </select>
               </div>
             </div>
             <div>
               <p>
-                Total Premium <b>₹ {plan.price}</b> Monthly &nbsp;
+                Total Premium <b>₹ {data.plan.amount}</b> Monthly &nbsp;
                 <img
                   src="https://buylifeinsurance.policybazaar.com/KotakeTermNew/images/web/info.svg"
                   alt=""

@@ -29,6 +29,9 @@ const initialState = {
       btnone: "Yes",
       btntwo: "No",
     },
+    plan: {
+      amount: "",
+    },
   },
   isLoading: false,
   error: false,

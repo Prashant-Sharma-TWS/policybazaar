@@ -36,6 +36,7 @@ const Card = ({ data }) => {
             question: "Select your annual income",
             btntwo: "",
           },
+          plan: { ...data.plan },
         })
       );
       return;
@@ -53,6 +54,7 @@ const Card = ({ data }) => {
             btnone: "Salaried",
             btntwo: "Self Employed",
           },
+          plan: { ...data.plan },
         })
       );
       return;
@@ -70,6 +72,7 @@ const Card = ({ data }) => {
             btnone: "Yes",
             btntwo: "",
           },
+          plan: { ...data.plan },
         })
       );
       return;
@@ -86,6 +89,7 @@ const Card = ({ data }) => {
             qualification: "12th",
             btntwo: "No",
           },
+          plan: { ...data.plan },
         })
       );
       return;
@@ -100,6 +104,7 @@ const Card = ({ data }) => {
           left: data.card.left - 1,
           isMaharastrian: name,
         },
+        plan: { ...data.plan },
       })
     );
   };
