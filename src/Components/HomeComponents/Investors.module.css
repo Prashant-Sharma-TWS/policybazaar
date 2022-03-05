@@ -8,6 +8,7 @@
   /* border: 2px solid black; */
   padding-top: 5px;
   height: fit-content;
+  width: 150px;
 }
 .investorHeading {
   font-size: 30px;
@@ -31,3 +32,7 @@
   margin: 2em auto;
   /* border: 10px solid aqua; */
 }
+
+/* .investorImgDiv{
+  background-color: #fff;
+} */
