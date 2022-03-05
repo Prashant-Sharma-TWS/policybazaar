@@ -567,6 +567,7 @@ export const PaymentDiv = styled.div`
     justify-content: space-between;
 
     .payment-left-sidebar {
+      background-color: #fff;
       box-shadow: 0 0 6px 0 rgb(76 90 111 / 17%);
 
       > div:nth-of-type(1) {
@@ -598,6 +599,7 @@ export const PaymentDiv = styled.div`
     }
 
     .payment-right-sidebar {
+      background-color: #fff;
       box-shadow: 0 0 6px 0 rgb(76 90 111 / 17%);
 
       > div:nth-of-type(1) {
