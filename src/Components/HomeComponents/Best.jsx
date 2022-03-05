@@ -1,5 +1,5 @@
 import React from "react";
-import "./Best.css";
+import "./CSS/Best.css";
 
 export const Best = () => {
   return (

@@ -58,7 +58,7 @@
 
 import React, { Component } from "react";
 import Slider from "react-slick";
-import styles from "./Investors.module.css";
+import styles from "./CSS/Investors.module.css";
 import one from "../../Images/Investors/info.JPG";
 import two from "../../Images/Investors/stead.JPG";
 import three from "../../Images/Investors/temask.JPG";

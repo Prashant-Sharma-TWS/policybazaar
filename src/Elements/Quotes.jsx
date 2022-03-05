@@ -239,6 +239,7 @@ export const QuoteCompany = styled.div`
             border: none;
             outline: none;
             padding: 3px 8px;
+            color: white;
             background-color: transparent;
             border-bottom: 1px solid lightblue;
 
@@ -262,6 +263,13 @@ export const QuoteCompany = styled.div`
             background-color: #8294a6;
             background-position: right 0.75rem center;
             background-size: 10px 10px;
+            border: none;
+          }
+        }
+        .filter-by-claim {
+          button {
+            color: white;
+            background-color: transparent;
             border: none;
           }
         }

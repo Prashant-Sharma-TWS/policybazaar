@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./PBSection.module.css";
+import styles from "./CSS/PBSection.module.css";
 import icon1 from "../../Images/scaler-images/slide-image-1.png";
 import icon2 from "../../Images/scaler-images/slide-image-2.png";
 import icon3 from "../../Images/scaler-images/slide-image-3.png";

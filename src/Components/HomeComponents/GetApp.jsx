@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./GetApp.module.css";
+import styles from "./CSS/GetApp.module.css";
 export const GetApp = () => {
   return (
     <div className={ styles.gAColor}>

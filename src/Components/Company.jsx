@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { QuoteCompany } from "../Elements/Quotes";
-import { BsArrowUp, BsArrowDown } from "react-icons/bs";
+import { BsArrowUp, BsArrowDown, BsSortUpAlt } from "react-icons/bs";
 import sideImage1 from "../Images/side-image-1.png";
 import sideImage2 from "../Images/side-image-2.png";
 import sideImage3 from "../Images/side-image-3.png";
@@ -16,20 +16,26 @@ export const Company = () => {
   const dispatch = useDispatch();
   const [companies, setCompanies] = useState([]);
   const { data } = useSelector((state) => state.user);
+  const [currFilter, setCurrFilter] = useState(data.filter);
 
   useEffect(() => {
     setCompanies(listOfInsuranceCompany.insurance);
+    console.log(currFilter);
   }, []);
 
+  console.log(companies);
   const handleChange = (e) => {
     let { name, value } = e.target;
     if (data.filter.switch === "on") value = "";
 
-    if (name === "name") handleName(name, value);
-    if (name === "amount") handleAmount(name, value);
-    if (name === "age") handleAge(name, value);
-    if (name === "sort") handleSort(name, value);
-    if (name === "switch") handleSwitch(name, value);
+    if (name === "name") handleName(value);
+    if (name === "amount") handleAmount(value);
+    if (name === "age") handleAge(value);
+    if (name === "sort") {
+      handleSort(value);
+      return;
+    }
+    if (name === "switch") handleSwitch(value);
 
     dispatch(updateUserDataRequest());
     dispatch(
@@ -41,7 +47,7 @@ export const Company = () => {
     );
   };
 
-  const handleSwitch = (name, value) => {
+  const handleSwitch = (value) => {
     const newData = companies.map((company) => {
       if (value === "on") {
         return {
@@ -56,20 +62,43 @@ export const Company = () => {
     });
     setCompanies(newData);
   };
-  const handleSort = (name, value) => {
-    // sort here
+  const handleSort = (value) => {
+    if (data.filter.sort === "asc") {
+      const newData = companies.sort((a, b) => b.claimchance - a.claimchance);
+      setCompanies(newData);
+      dispatch(updateUserDataRequest());
+      dispatch(
+        updateUserDataSuccess({
+          filter: { ...data.filter, sort: "desc" },
+          card: { ...data.card },
+          plan: { ...data.plan },
+        })
+      );
+      return;
+    }
+    const newData = companies.sort((a, b) => a.claimchance - b.claimchance);
+    setCompanies(newData);
+    dispatch(updateUserDataRequest());
+    dispatch(
+      updateUserDataSuccess({
+        filter: { ...data.filter, sort: "asc" },
+        card: { ...data.card },
+        plan: { ...data.plan },
+      })
+    );
   };
-  const handleAge = (name, value) => {
+  const handleAge = (value) => {
     const newData = companies.filter((company) => company.till === value);
     setCompanies(newData);
   };
-  const handleName = (name, value) => {
+  const handleName = (value) => {
+    console.log(value);
     const newData = companies.filter((company) =>
       company.name.toLowerCase().includes(value.toLowerCase())
     );
     setCompanies(newData);
   };
-  const handleAmount = (name, value) => {
+  const handleAmount = (value) => {
     const newData = companies.filter((company) => company.lifeCover === value);
     setCompanies(newData);
   };
@@ -148,14 +177,13 @@ export const Company = () => {
                 </select>
               </li>
               <li className="line-in-middle"></li>
-              <li
-                className="filter-by-claim"
-                name="sort"
-                onClick={handleChange}
-              >
-                Claim Settled
-                <BsArrowUp />
-                <BsArrowDown />
+              <li className="filter-by-claim">
+                <button name="sort" onClick={handleChange}>
+                  Claim Settled &nbsp;
+                  {data.filter.sort === "" && <BsSortUpAlt size="16px" />}
+                  {data.filter.sort === "asc" && <BsArrowUp size="16px" />}
+                  {data.filter.sort === "desc" && <BsArrowDown size="16px" />}
+                </button>
               </li>
               <li className="line-in-middle"></li>
               <li className="toggle">

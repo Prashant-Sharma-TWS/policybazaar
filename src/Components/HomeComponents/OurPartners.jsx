@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../HomeComponents/Ourpartners.module.css";
+import styles from "./CSS/Ourpartners.module.css";
 
 export const OurPartners = () => {
   return (
@@ -52,12 +52,12 @@ export const OurPartners = () => {
                       />
                     </div>
                   </a>
-                    <div className={`${styles.logo_icon} ${styles.cigna}`}>
-                      <img
-                        src="https://cms-img.coverfox.com/manipalcigna%20health%20insurance.jpg"
-                        alt=""
-                      />
-                    </div>
+                  <div className={`${styles.logo_icon} ${styles.cigna}`}>
+                    <img
+                      src="https://cms-img.coverfox.com/manipalcigna%20health%20insurance.jpg"
+                      alt=""
+                    />
+                  </div>
                   <a
                     href="https://www.policybazaar.com/insurance-companies/hdfc-life-insurance/"
                     title="HDFC Life Insurance"
@@ -102,12 +102,12 @@ export const OurPartners = () => {
                       />
                     </div>
                   </a>
-                    <div className={`${styles.logo_icon} ${styles.bajajgen}`}>
-                      <img
-                        src="https://i.pinimg.com/736x/05/d9/8b/05d98b9fc3c48689826b4e511321cc72.jpg"
-                        alt=""
-                      />
-                    </div>
+                  <div className={`${styles.logo_icon} ${styles.bajajgen}`}>
+                    <img
+                      src="https://i.pinimg.com/736x/05/d9/8b/05d98b9fc3c48689826b4e511321cc72.jpg"
+                      alt=""
+                    />
+                  </div>
                   <a
                     href="https://www.policybazaar.com/insurance-companies/max-bupa-health-insurance/"
                     title="Max Bupa Health Insurance"
@@ -445,12 +445,12 @@ export const OurPartners = () => {
                       />
                     </div>
                   </a>
-                    <div className={`${styles.logo_icon} ${styles.magmahdi}`}>
-                      <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaDMRIK2fdTE2_06aLZKbE7Jm69crlQzmMrabUzzeqlRtkFRGY7UkdRA6A8nf8MghD2cI&usqp=CAU"
-                        alt=""
-                      />
-                    </div>
+                  <div className={`${styles.logo_icon} ${styles.magmahdi}`}>
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaDMRIK2fdTE2_06aLZKbE7Jm69crlQzmMrabUzzeqlRtkFRGY7UkdRA6A8nf8MghD2cI&usqp=CAU"
+                      alt=""
+                    />
+                  </div>
                   <a
                     href="https://www.policybazaar.com/insurance-companies/raheja-qbe-health-insurance/"
                     title="Raheja QBE Health Insurance"

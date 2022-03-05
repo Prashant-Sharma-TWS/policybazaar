@@ -6,7 +6,7 @@ import four from "../../Images/Slider/minislider4.webp";
 import five from "../../Images/Slider/minislider5.webp";
 import six from "../../Images/Slider/minislider6.webp";
 import seven from "../../Images/Slider/minislider7.webp";
-import styles from "./SecondSlider.module.css";
+import styles from "./CSS/SecondSlider.module.css";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";

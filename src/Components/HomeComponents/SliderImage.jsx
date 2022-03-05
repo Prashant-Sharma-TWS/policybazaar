@@ -3,7 +3,7 @@ import imageOne from "../../Images/slide-image-1.png";
 import imageTwo from "../../Images/slide-image-2.png";
 import imageThree from "../../Images/slide-image-3.png";
 import imageFour from "../../Images/slide-image-4.png";
-import styles from "./SecondSlider.module.css";
+import styles from "./CSS/SecondSlider.module.css";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";

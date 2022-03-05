@@ -46,10 +46,11 @@ export const Payments = () => {
               </div>
               <div>
                 <label>Mode of Premium Payment</label>
-                <select className="select-label">
-                  <option value="">
-                    {data.plan.amount < 5000 ? "Monthly" : "Yearly"}
-                  </option>
+                <select
+                  className="select-label"
+                  defaultValue={data.plan.amount < 5000 ? "Monthly" : "Yearly"}
+                >
+                  <option value="">Monthly</option>
                 </select>
               </div>
               <div>
@@ -74,31 +75,23 @@ export const Payments = () => {
               <input type="text" placeholder="Annual Income" />
               <div>
                 <label>Occupation</label>
-                <select className="select-label">
-                  {data.card.occupation === "Salaried" ? (
-                    <>
-                      <option value="Salaried" selected>
-                        Salaried
-                      </option>
-                      <option value="Self Employed">Self Employed</option>
-                    </>
-                  ) : (
-                    <>
-                      <option value="Salaried">Salaried</option>
-                      <option value="Self Employed" selected>
-                        Self Employed
-                      </option>
-                    </>
-                  )}
+                <select
+                  className="select-label"
+                  defaultValue={
+                    data.card.occupation === "Salaried"
+                      ? "Salaried"
+                      : "Self Employed"
+                  }
+                >
+                  <option value="Salaried">Salaried</option>
+                  <option value="Self Employed">Self Employed</option>
                 </select>
               </div>
               <div>
                 <label>Education</label>
                 <select className="select-label">
                   <option value="">Graduation &amp; above</option>
-                  <option value="12th" selected>
-                    12th
-                  </option>
+                  <option value="12th">12th</option>
                   <option value="10th">10th &amp; below</option>
                 </select>
               </div>
