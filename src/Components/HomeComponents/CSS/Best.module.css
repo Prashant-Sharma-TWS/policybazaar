@@ -3,7 +3,7 @@ body {
     "Helvetica Neue", Arial, sans-serif;
 }
 
-.best-place {
+.best_place {
   background: url("https://static.pbcdn.in/cdn/images/home-v1/left-bg.png") left
       top no-repeat,
     url("https://static.pbcdn.in/cdn/images/home-v1/right-bg.png") right top
@@ -11,7 +11,7 @@ body {
   min-height: 510px;
 }
 
-.best-place .container {
+.best_place .container {
   margin: 0 auto;
 }
 
@@ -26,19 +26,19 @@ body {
   position: relative;
 }
 
-.best-place .container .left-block {
+.best_place .container .left_block {
   display: flex;
   overflow: auto;
   padding-bottom: 26px;
   scrollbar-width: none;
 }
 
-.best-place .container .left-block .txt-block.opacity-1 {
+.best_place .container .left_block .txt_block.opacity-1 {
   opacity: 1;
   transition: all 0.5s ease-in;
   margin-left: 0;
 }
-.best-place .container .left-block .txt-block {
+.best_place .container .left_block .txt_block {
   font-size: 36px;
   width: 40%;
   color: #253858;
@@ -48,22 +48,22 @@ body {
   margin-top: 110px;
 }
 
-.best-place .container .left-block .txt-block span {
+.best_place .container .left_block .txt_block span {
   font-weight: 500;
 }
 
-.best-place .container .right-block.top-0 {
+.best_place .container .right_block.top_0 {
   margin-top: 0;
   transition: all 0.5s ease-in;
   opacity: 1;
 }
-.best-place .container .right-block {
+.best_place .container .right_block {
   width: 60%;
   text-align: right;
   padding-right: 10px;
 }
 
-.best-place .container .right-block .info-box::before {
+.best_place .container .right_block .info_box::before {
   content: "";
   position: absolute;
   left: -2;
@@ -73,7 +73,7 @@ body {
   background: #2d3cd9;
 }
 
-.best-place .container .right-block .info-box {
+.best_place .container .right_block .info_box {
   width: 200px;
   vertical-align: top;
   background: #fff;
@@ -88,7 +88,7 @@ body {
   overflow: hidden;
 }
 
-.best-place .container .right-block .info-box p.head {
+.best_place .container .right_block .info_box p.head {
   font-size: 18px;
   font-weight: 600;
   color: #2d3cd9;
@@ -98,18 +98,18 @@ p {
   margin: 0;
 }
 
-.best-place .container .right-block .info-box p.copy {
+.best_place .container .right_block .info_box p.copy {
   font-size: 14px;
   line-height: 21px;
   color: #253858;
   padding: 10px 11px 0 16px;
 }
 
-.best-place .container .right-block .info-box.insurer {
+.best_place .container .right_block .info_box.insurer {
   margin: 64px 40px 0 0;
 }
 
-.best-place .container .right-block .info-box {
+.best_place .container .right_block .info_box {
   width: 200px;
   vertical-align: top;
   background: #fff;
@@ -122,66 +122,63 @@ p {
   left: 0;
   overflow: hidden;
 }
-.best-place .container .right-block .info-box.insurer::before {
+.best_place .container .right_block .info_box.insurer::before {
   background: #0bbdf2;
 }
 
-.best-place .container .right-block .info-box.insurer span.top-icon {
+.best_place .container .right_block .info_box.insurer span.top_icon {
   background-position: 0 -34px;
 }
 
-.best-place .container .right-block .info-box.insurer p.head {
+.best_place .container .right_block .info_box.insurer p.head {
   color: #0bbdf2;
 }
 
-.best-place .container .right-block .info-box.lowest-price::before {
+.best_place .container .right_block .info_box.lowest_price::before {
   background: #47d990;
 }
 
-.best-place .container .right-block .info-box.lowest-price {
+.best_place .container .right_block .info_box.lowest_price {
   margin: 24px 0 0 0;
 }
 
-.best-place .container .right-block .info-box.lowest-price span.top-icon {
+.best_place .container .right_block .info_box.lowest_price span.top_icon {
   background-position: 0 -68px;
 }
 
-.best-place .container .right-block .info-box span.top-icon {
+.best_place .container .right_block .info_box span.top_icon {
   width: 24px;
   height: 24px;
   margin: 16px;
   display: inline-block;
-  background: url("https://static.pbcdn.in/cdn/images/home-v1/best-place-icons.png")
+  background: url("https://static.pbcdn.in/cdn/images/home-v1/best_place-icons.png")
     no-repeat;
   background-size: 100%;
 }
 
-.best-place .container .right-block .info-box.lowest-price p.head {
+.best_place .container .right_block .info_box.lowest_price p.head {
   color: #47d990;
 }
 
-.best-place .container .right-block .info-box.claims::before {
+.best_place .container .right_block .info_box.claims::before {
   background: #ffc400;
 }
 
-.best-place .container .right-block .info-box.claims {
+.best_place .container .right_block .info_box.claims {
   margin: 46px 0 20px 48px;
 }
 
-.best-place .container .right-block .info-box.claims span.top-icon {
+.best_place .container .right_block .info_box.claims span.top_icon {
   background-position: 0 -102px;
 }
 
-.best-place .container .right-block .info-box.claims p.head {
+.best_place .container .right_block .info_box.claims p.head {
   color: #ffc400;
 }
 
-element {
+.lazy {
   width: 1px;
   height: 1px;
-}
-
-img {
   max-width: 100%;
   vertical-align: middle;
 }

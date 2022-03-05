@@ -1,0 +1,245 @@
+body {
+  font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
+}
+.help {
+  padding: 70px 0;
+}
+
+.help .container {
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  width: 1170px;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.help .container .heading {
+  width: 100%;
+}
+
+.help .container .heading .h2 {
+  font-size: 30px;
+  line-height: 36px;
+  padding: 0;
+  margin: 0 0 20px;
+  font-weight: 500;
+  color: #253858;
+}
+
+.help .container .heading .h2 span {
+  background: #0065ff;
+  width: 70px;
+  height: 4px;
+  margin: 20px 0 0;
+  display: block;
+}
+
+.help .container .help_pic {
+  width: 70%;
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
+  order: 3;
+  text-align: right;
+}
+
+.help .container .help_pic img {
+  width: 60%;
+  margin: 0 auto;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.help .container .help_text {
+  width: 30%;
+  -webkit-box-ordinal-group: 3;
+  order: 2;
+}
+
+.help .container .help_text p {
+  font-size: 16px;
+  padding: 20px 0;
+  color: #253858;
+  line-height: 30px;
+}
+
+p {
+  margin: 0;
+}
+.help .container .help_text a.btn {
+  border: 1px solid #7a869a;
+  display: block;
+  padding: 20px 0 20px 20%;
+  border-radius: 8px;
+  margin: 0 0 20px;
+  text-decoration: none;
+  position: relative;
+}
+
+.mail {
+  width: 25px;
+  height: 20px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPILW5ncuLohenJlWtVExC7oVmDmc4_EtDT1-Df4JFH8vQryWFXGGzatJCNNP3lZB81Jk&usqp=CAU")
+    no-repeat;
+  background-size: 25px;
+}
+.support {
+  width: 25px;
+  height: 20px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: url("https://png.pngitem.com/pimgs/s/154-1540334_transparent-headphones-clipart-png-headset-icon-png-png.png")
+    no-repeat;
+  background-size: 20px;
+}
+
+.help .container .help_text a.btn span {
+  display: block;
+  padding: 0 0 5px;
+  color: #5e6c84;
+}
+.help .container .help_text a.btn span:last-child {
+  font-size: 18px;
+  color: #172b4d;
+  font-weight: 500;
+}
+
+.help .container .help_text a.btn span {
+  display: block;
+  padding: 0 0 5px;
+}
+.help .container .help_text a.btn.no-margin {
+  margin: 0;
+}
+.help .container .help_text a.btn {
+  border: 1px solid #7a869a;
+  display: block;
+  padding: 20px 0 20px 20%;
+  border-radius: 8px;
+  text-decoration: none;
+  position: relative;
+}
+
+.group_companies {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.group_companies .container {
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.group_companies .container .text {
+  width: 15%;
+  font-size: 24px;
+  color: #172b4d;
+  font-weight: 600;
+}
+.group_companies .container .co_logo {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.group_companies .container .logo_block {
+  width: 155px;
+  height: 60px;
+  text-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+}
+
+.group_companies .container .logo_block .doc_prime {
+  background: url("https://static.pbcdn.in/cdn/images/home-v1/co-logo.png?v=3")
+    no-repeat;
+  background-size: 100%;
+  width: 150px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.group_companies .container .logo_block .co_logo_sprite.quick_fix_cars {
+  background-position: 0 -84px;
+}
+.group_companies .container .logo_block .quick_fix_cars {
+  background: url("https://static.pbcdn.in/cdn/images/home-v1/co-logo.png?v=3")
+    no-repeat;
+  background-size: 100%;
+  width: 150px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.group_companies .container .logo_block .co_logo_sprite.policy_bazaar {
+  background-position: 0 -162px;
+}
+.group_companies .container .logo_block .policy_bazaar {
+  background: url("https://static.pbcdn.in/cdn/images/home-v1/co-logo.png?v=3")
+    no-repeat;
+  background-size: 100%;
+  width: 150px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.group_companies .container .logo_block .co_logo_sprite.paisa_bazaar {
+  background-position: 0 -248px;
+}
+.group_companies .container .logo_block .paisa_bazaar {
+  background: url("https://static.pbcdn.in/cdn/images/home-v1/co-logo.png?v=3")
+    no-repeat;
+  background-size: 100%;
+  width: 150px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.group_companies .container .logo_block .co_logo_sprite.pb_partner {
+  background-position: 0 -365px;
+}
+
+.group_companies .container .logo_block .pb_partner {
+  background: url("https://static.pbcdn.in/cdn/images/home-v1/co-logo.png?v=3")
+    no-repeat;
+  background-size: 100%;
+  width: 150px;
+  height: 60px;
+  margin: 0 auto;
+}
+.group_companies .container .logo_block .co_logo_sprite.fintech {
+  background-position: 0 -305px;
+}
+.group_companies .container .logo_block .fintech {
+  background: url("https://static.pbcdn.in/cdn/images/home-v1/co-logo.png?v=3")
+    no-repeat;
+  background-size: 100%;
+  width: 150px;
+  height: 60px;
+  margin: 0 auto;
+}
