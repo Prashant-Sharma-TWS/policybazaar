@@ -15,7 +15,8 @@
 }
 
 .container {
-  width: 85%;
+  width: 1170px;
+  max-width: 100%;
 }
 
 .container {
@@ -117,7 +118,7 @@ p {
   /* -moz-transition: all 0.1s; */
   filter: grayscale(100%);
   opacity: 0.6;
-  /* background-size: 1115px 932px; */
+  background-size: 1115px 932px;
   position: relative;
   overflow: hidden;
   display: inline-block;
