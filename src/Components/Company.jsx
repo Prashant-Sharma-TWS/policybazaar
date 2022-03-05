@@ -39,17 +39,19 @@ export const Company = () => {
       })
     );
   };
-
+  console.log(companies);
   const handleSwitch = (name, value) => {
     const newData = companies.map((company) => {
-      if (value === "on")
+      if (value === "on") {
         return {
           ...company,
-          price: Math.round(
-            company.price * 12 - (company.price * 12 * 5) / 100
-          ),
+          price: Math.round(company.price * 12).toString(),
         };
-      return company;
+      }
+      return {
+        ...company,
+        price: Math.round(company.price / 12).toString(),
+      };
     });
     setCompanies(newData);
   };
