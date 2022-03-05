@@ -21,7 +21,9 @@ export const Quotes = () => {
 const Card = ({ data }) => {
   const dispatch = useDispatch();
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+    const { name } = e.target;
+
     if (data.card.left === 5) {
       dispatch(updateUserDataRequest());
       dispatch(
@@ -30,6 +32,7 @@ const Card = ({ data }) => {
           card: {
             ...data.card,
             left: data.card.left - 1,
+            smoke: name,
             question: "Select your annual income",
             btntwo: "",
           },
@@ -46,6 +49,7 @@ const Card = ({ data }) => {
             ...data.card,
             left: data.card.left - 1,
             question: "Please choose your occupation type",
+            income: "below 2 Lac",
             btnone: "Salaried",
             btntwo: "Self Employed",
           },
@@ -62,6 +66,7 @@ const Card = ({ data }) => {
             ...data.card,
             left: data.card.left - 1,
             question: "Select Educational Qualification",
+            occupation: name === "Yes" ? "Salaried" : "Self Employed",
             btnone: "Yes",
             btntwo: "",
           },
@@ -78,6 +83,7 @@ const Card = ({ data }) => {
             ...data.card,
             left: data.card.left - 1,
             question: "Are you a resident of Maharashtra ?",
+            qualification: "12th",
             btntwo: "No",
           },
         })
@@ -92,6 +98,7 @@ const Card = ({ data }) => {
           ...data.card,
           show: false,
           left: data.card.left - 1,
+          isMaharastrian: name,
         },
       })
     );
@@ -153,10 +160,14 @@ const Card = ({ data }) => {
         )}
         <div>
           {data.card.btnone.length > 0 && (
-            <button onClick={handleClick}>{data.card.btnone}</button>
+            <button name="Yes" onClick={handleClick}>
+              {data.card.btnone}
+            </button>
           )}
           {data.card.btntwo.length > 0 && (
-            <button onClick={handleClick}>{data.card.btntwo}</button>
+            <button name="No" onClick={handleClick}>
+              {data.card.btntwo}
+            </button>
           )}
         </div>
       </div>

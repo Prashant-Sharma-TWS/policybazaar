@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { QuoteCompany } from "../Elements/Quotes";
 import { BsArrowUp, BsArrowDown } from "react-icons/bs";
 import sideImage1 from "../Images/side-image-1.png";
 import sideImage2 from "../Images/side-image-2.png";
 import sideImage3 from "../Images/side-image-3.png";
 import listOfInsuranceCompany from "../items.json";
-import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   updateUserDataRequest,
   updateUserDataSuccess,
 } from "../Redux/Data/data.action";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const Company = () => {
   const dispatch = useDispatch();
@@ -98,9 +98,9 @@ export const Company = () => {
         </div>
       </div>
       <div>
-        <div>
+        <div className="company-details">
           <div>
-            <ul className="filters">
+            <ul className="filters column">
               <li className="search-by-name">
                 <input
                   type="text"
@@ -197,6 +197,9 @@ export const Company = () => {
 };
 
 const ListOfCompany = ({ companies }) => {
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
   return (
     <div className="list-of-company">
       {Array.isArray(companies) &&
@@ -214,9 +217,9 @@ const ListOfCompany = ({ companies }) => {
               </p>
             </li>
             <li className="line-in-middle"></li>
-            <li>{company.lifeCover} Lac</li>
+            <li className="lac">{company.lifeCover} Lac</li>
             <li className="line-in-middle"></li>
-            <li>
+            <li className="yrs">
               <p>{company.till} yrs</p>
               <p>
                 <img
@@ -229,12 +232,14 @@ const ListOfCompany = ({ companies }) => {
             <li className="line-in-middle"></li>
             <li>{company.claimchance}%</li>
             <li className="line-in-middle"></li>
-            <li>
+            <li className="last-wala">
               <div>
                 <p>Limited Period Offer</p>
                 <p>Plans prices to increase soon</p>
               </div>
-              <button onClick={() => {}}>
+              <button
+                onClick={() => navigate(`${pathname}/${company.id}/payments`)}
+              >
                 ₹ {company.price} <i></i>
               </button>
             </li>

@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { Error } from "../Elements/NavbarFooter";
 import { Home } from "../Pages/Home";
 import { Insurance } from "../Pages/Insurance";
+import { Payments } from "../Pages/Payments";
 import { Quotes } from "../Pages/Quotes";
 
 export const Routers = () => {
@@ -17,6 +18,10 @@ export const Routers = () => {
         <Route
           path="/policybazaar/Term%20Life%20Insurance/quotes"
           element={<Quotes />}
+        />
+        <Route
+          path="/policybazaar/Term%20Life%20Insurance/quotes/:id/payments"
+          element={<Payments />}
         />
         <Route
           path="/policybazaar/Health%20Insurance"

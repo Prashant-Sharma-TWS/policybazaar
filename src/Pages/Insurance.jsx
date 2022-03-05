@@ -32,18 +32,18 @@ export const Insurance = () => {
     setUser({ ...user, [name]: value });
   };
 
-  const handleQuote = () => {navigate(`${pathname}/quotes`)};
+  const handleQuote = () => (navigate(`${pathname}/quotes`));
 
   return (
     <InsuranceCard>
-      <div>
-        <div>
+      <div className="insurance-div">
+        <div className="first-div-insurance">
           <img
             src="https://termlife.policybazaar.com/assets/images/akshayimg.png"
             alt="akshay"
           />
         </div>
-        <div>
+        <div className="second-div-insurance">
           <div>
             <h1>
               <b>1 Crore</b> life cover at <b>₹490/month+</b>

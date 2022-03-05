@@ -3,6 +3,34 @@ import styled from "styled-components";
 export const InsuranceCard = styled.div`
   padding: 20px 0 40px;
   background-color: #eee;
+
+  @media screen and (max-width: 750px) {
+    padding: 0px 0 0px;
+    background-color: #fff;
+    > div.insurance-div {
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px 0 40px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      color: #212529;
+      background: #fff;
+      box-shadow: 0 1px 30px rgb(0 0 0 / 30%);
+      border-top: 1px solid #ddd;
+      border-radius: 0px;
+
+      > div:nth-of-type(1) {
+        display: none;
+      }
+      > div:nth-of-type(2).second-div-insurance {
+        width: 85%;
+        margin: auto;
+        padding: 0px 0px 0px 0px;
+      }
+    }
+  }
+
   > div {
     width: 85%;
     margin: 0 auto;

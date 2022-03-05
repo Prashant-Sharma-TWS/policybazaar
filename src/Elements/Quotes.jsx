@@ -196,6 +196,12 @@ export const QuoteCompany = styled.div`
     line-height: 1.5;
     color: #253858;
 
+    @media screen and (max-width: 750px) {
+      > div.company-details {
+        grid-template-columns: 100%;
+      }
+    }
+
     > div {
       display: grid;
       grid-template-columns: 69% 28%;
@@ -345,6 +351,47 @@ export const QuoteCompany = styled.div`
           color: #212529;
           border-radius: 10px;
           background: #fff;
+
+          @media screen and (max-width: 750px) {
+            grid-template-columns: 20% 1px 17% 1px 40%;
+            height: 150px;
+
+            .lac,
+            .yrs,
+            .lac + .line-in-middle,
+            .yrs + .line-in-middle {
+              display: none;
+            }
+            > li:nth-of-type(9).last-wala {
+              > div {
+                top: 78%;
+                right: 0;
+                left: -15%;
+                width: 150px;
+
+                > p:nth-of-type(1) {
+                  font-size: 10px;
+                  padding: 1px 8px 2px;
+                }
+                > p:nth-of-type(2) {
+                  font-size: 9px;
+                }
+              }
+
+              > button {
+                top: 30%;
+                left: 0%;
+                min-width: 80px;
+
+                > i {
+                  top: 45%;
+                  left: 68%;
+                  width: 6px;
+                  height: 6px;
+                }
+              }
+            }
+          }
 
           .line-in-middle {
             width: 1px;
@@ -502,5 +549,143 @@ export const QuoteCompany = styled.div`
     border: none;
     border-radius: 8px;
     cursor: pointer;
+  }
+`;
+
+export const PaymentDiv = styled.div`
+  width: 100%;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fafafa;
+
+  > div {
+    width: 85%;
+    margin: auto;
+    padding: 20px 0 40px;
+    display: grid;
+    grid-template-columns: 33% 65%;
+    justify-content: space-between;
+
+    .payment-left-sidebar {
+      box-shadow: 0 0 6px 0 rgb(76 90 111 / 17%);
+
+      > div:nth-of-type(1) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40% 20px 20px;
+        border-bottom: 1px solid #ddd;
+
+        > img {
+          width: 100px;
+        }
+        > p {
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 1.5;
+          color: #27313d;
+        }
+      }
+
+      > div:nth-of-type(2) {
+        padding: 30px 40px 20px;
+
+        label {
+          font-size: 11px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .payment-right-sidebar {
+      box-shadow: 0 0 6px 0 rgb(76 90 111 / 17%);
+
+      > div:nth-of-type(1) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 50px 14px 40px;
+        border-bottom: 1px solid #ddd;
+        color: #b2b2b2;
+        font-weight: 600;
+        font-size: 14px;
+
+        .line-in-middle {
+          width: 20%;
+          height: 1px;
+          background-color: #ddd;
+        }
+      }
+
+      > div:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+        padding: 50px 140px 0px 140px;
+
+        label {
+          font-size: 11px;
+          font-weight: 500;
+          color: #4c5a6f;
+        }
+        input {
+          border: 0;
+          padding: 7px 0;
+          border-bottom: 1px solid #e5e8eb;
+          padding-right: 40px;
+          background-color: transparent;
+          margin-bottom: 40px;
+
+          ::placeholder {
+            font-size: 16px;
+            font-weight: 600;
+          }
+        }
+        input:focus {
+          outline: none;
+          border-bottom: 1px solid #1b98f5;
+        }
+      }
+      > div:nth-of-type(3) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 50px;
+        font-size: 16px;
+        color: #27313d;
+        b {
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 1.18;
+        }
+      }
+      .btn-primary {
+        color: #fff;
+        background-color: #fd4704;
+        border-color: #fd4704;
+        border: none;
+        padding: 11px 40px;
+        font-size: 16px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        border-radius: 5px;
+      }
+    }
+    .select-label {
+      position: relative;
+      font-size: 16px;
+      padding: 0;
+      display: flex;
+      width: 100%;
+      height: 40px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #27313d;
+      padding-right: 20px;
+      cursor: pointer;
+    }
   }
 `;

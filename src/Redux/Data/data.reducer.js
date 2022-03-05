@@ -25,7 +25,7 @@ const initialState = {
       income: "",
       occupation: "",
       qualification: "",
-      resident: "",
+      isMaharastrian: "",
       btnone: "Yes",
       btntwo: "No",
     },
