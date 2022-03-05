@@ -15,11 +15,15 @@ import img11 from "../../Images/home/img11.png";
 import img12 from "../../Images/home/img12.png";
 import img13 from "../../Images/home/img13.png";
 import img14 from "../../Images/home/img14.png";
+import { SmallScreen } from "./SmallScreen";
 
 export const Top = () => {
   return (
     <HomeTop>
       <div>
+        <div className="small-screen-top">
+          <SmallScreen />
+        </div>
         <div className="top-viewport">
           <div>
             <h1>

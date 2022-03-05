@@ -4,6 +4,17 @@ export const HomeTop = styled.div`
   > div {
     width: 85%;
     margin: auto;
+    .small-screen-top {
+      display: none;
+    }
+    @media screen and (max-width: 750px) {
+      div.small-screen-top {
+        width: 85%;
+        margin: auto;
+        padding: 50px 0 20px;
+        display: block;
+      }
+    }
   }
 
   .top-viewport {
@@ -74,8 +85,8 @@ export const HomeTop = styled.div`
       z-index: -1;
     }
     div.akshay-image img {
-     width: 250px;
-     height: 230px;
+      width: 250px;
+      height: 230px;
     }
 
     .slider-parent {

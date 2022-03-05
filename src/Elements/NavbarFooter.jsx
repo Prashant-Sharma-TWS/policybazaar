@@ -269,13 +269,14 @@ export const Nav = styled.nav`
     }
 
     .show-anime + div + ul {
-      width: 90%;
+      width: 100%;
       height: 90vh;
       background-color: #fff;
       z-index: 100;
       position: fixed;
       top: 60px;
-      padding: 20px 0;
+      left: 0;
+      padding: 20px 30px 200px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
