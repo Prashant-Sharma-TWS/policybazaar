@@ -4,6 +4,15 @@ import { useNavigate } from "react-router-dom";
 import { Nav } from "../Elements/NavbarFooter";
 import logo from "../Images/logo.svg";
 import userIcon from "../Images/Icons/user-icon.svg";
+import img1 from "../Images/home/img1.png";
+import img2 from "../Images/home/img2.png";
+import img3 from "../Images/home/img3.png";
+import img4 from "../Images/home/img4.png";
+import img14 from "../Images/home/img14.png";
+import user1 from "../Images/home/user1.jpeg";
+import user2 from "../Images/home/user2.jpeg";
+import user3 from "../Images/home/user3.jpeg";
+import user4 from "../Images/home/user4.jpeg";
 import { SignIn } from "./SignIn";
 import { useDispatch } from "react-redux";
 import { logoutRequest, logoutSuccess } from "../Redux/Auth/auth.action";
@@ -101,16 +110,16 @@ const ListItem = ({ text, arrowDown, className, isUserLoggedIn }) => {
           onMouseLeave={() => setOpen(false)}
         >
           <ul>
-            <li>Your Profile</li>
-            <li>Your Policies</li>
-            <li>Your Transactions</li>
+            <li><img src={user1} alt="" width="25px" />&nbsp;Your Profile</li>
+            <li><img src={user2} alt="" width="25px" />&nbsp;Your Policies</li>
+            <li><img src={user3} alt="" width="25px" />&nbsp;Your Transactions</li>
             <li
               onClick={() => {
                 dispatch(logoutRequest());
                 dispatch(logoutSuccess());
               }}
             >
-              Sign Out
+              <img src={user4} alt="" width="25px" />&nbsp;Sign Out
             </li>
           </ul>
         </div>
@@ -127,7 +136,10 @@ const ListItem = ({ text, arrowDown, className, isUserLoggedIn }) => {
         >
           <div>
             <ul>
-              <h3>Life Insurance</h3>
+              <h3>
+                <img src={img1} alt="" width="25px" height="25px" />
+                Life Insurance
+              </h3>
               <li>Term Insurance</li>
               <li>Saral Jeevan Bima</li>
               <li>Life Insurance</li>
@@ -138,7 +150,10 @@ const ListItem = ({ text, arrowDown, className, isUserLoggedIn }) => {
               <li>Dedicated Claim Assistance</li>
             </ul>
             <ul>
-              <h3>Other Insurance</h3>
+              <h3>
+                <img src={img14} alt="" width="25px" height="25px" />
+                Other Insurance
+              </h3>
               <li>Travel Insurance</li>
               <li>Group Health Insurance</li>
               <li>Home Insurance</li>
@@ -149,7 +164,10 @@ const ListItem = ({ text, arrowDown, className, isUserLoggedIn }) => {
               <li>Other General Insurance Products</li>
             </ul>
             <ul>
-              <h3>Investment Plans</h3>
+              <h3>
+                <img src={img3} alt="" width="25px" height="25px" />
+                Investment Plans
+              </h3>
               <li>Child Plans</li>
               <li>Pension Plans</li>
               <li>ULIP</li>
@@ -161,7 +179,10 @@ const ListItem = ({ text, arrowDown, className, isUserLoggedIn }) => {
               <li>Annuity Plans</li>
             </ul>
             <ul>
-              <h3>Health Insurance</h3>
+              <h3>
+                <img src={img2} alt="" width="25px" height="25px" />
+                Health Insurance
+              </h3>
               <li>Family Health Insurance</li>
               <li>Senior Citizen Health Insurance</li>
               <li>Health Insurance for Parents</li>
@@ -174,7 +195,10 @@ const ListItem = ({ text, arrowDown, className, isUserLoggedIn }) => {
               <li>Health Insurance Calculator</li>
             </ul>
             <ul>
-              <h3>Car Insurance</h3>
+              <h3>
+                <img src={img4} alt="" width="25px" height="25px" />
+                Car Insurance
+              </h3>
               <li>Motor Insurance</li>
               <li>Two Wheeler Insurance</li>
               <li>Commercial Vehicle Insurance</li>
@@ -203,9 +227,9 @@ const ListItem = ({ text, arrowDown, className, isUserLoggedIn }) => {
           onMouseLeave={() => setOpen(false)}
         >
           <ul>
-            <li>Life Renewal</li>
-            <li>Health Renewal</li>
-            <li>Motor Renewal</li>
+            <li><img src={img1} alt="" />Life Renewal</li>
+            <li><img src={img2} alt="" />Health Renewal</li>
+            <li><img src={img4} alt="" />Motor Renewal</li>
             <li>Two Wheeler Renewal</li>
           </ul>
         </div>

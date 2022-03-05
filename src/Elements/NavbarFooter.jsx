@@ -42,12 +42,14 @@ export const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
 
     li {
       font-size: 15px;
       font-weight: 400;
       position: relative;
       color: #172b4d;
+      padding-bottom: 10px;
 
       :hover {
         cursor: pointer;
@@ -71,8 +73,7 @@ export const Nav = styled.nav`
 
     .drop-down {
       position: absolute;
-      top: 35px;
-      z-index: -5;
+      top: 40px;
       background: #fff;
       box-shadow: 0 6px 16px rgb(52 105 203 / 16%);
       border-bottom-right-radius: 8px;
@@ -100,10 +101,11 @@ export const Nav = styled.nav`
         line-height: 3.8rem;
 
         li {
-          width: 100%;
           font-size: 16px;
-          font-weight: 600;
-          color: #222;
+          line-height: 20px;
+          margin: 15px 0;
+          width: 100%;
+          color: #172b4d;
           transition: all 0.1s ease;
         }
       }
@@ -111,7 +113,7 @@ export const Nav = styled.nav`
 
     .insurance-products {
       width: 85%;
-      height: 130vh;
+      height: 150vh;
       left: 7.5%;
       padding: 30px 20px;
       text-align: left;
@@ -208,6 +210,7 @@ export const Nav = styled.nav`
     color: #0065ff;
     background-color: transparent;
     cursor: pointer;
+    z-index: 1;
   }
 
   .hamburger {
