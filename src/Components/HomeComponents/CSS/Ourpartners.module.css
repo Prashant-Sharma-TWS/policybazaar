@@ -106,6 +106,33 @@ p {
   position: relative;
 }
 
+.partnerLogo .logo-icon.cigna::before {
+  background-position: -426px 6px;
+}
+.partnerLogo .logo-icon::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-size: 1115px 1025px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+
+.no-webp .logo-icon::before {
+  background-image: url("");
+}
+.partnerLogo .logo-icon::before {
+  min-width: 130px;
+  text-align: center;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 0;
+}
+
 .partnerLogo .logo_icon {
   min-width: 130px;
   height: 68px;
@@ -113,11 +140,11 @@ p {
   border-radius: 4px;
   border: solid 0.6px #dedfdf;
   background-color: #fff;
-  width: 100%;
+  /* width: 100%; */
   /* -moz-transition: all 0.1s; */
   filter: grayscale(100%);
   opacity: 0.6;
-  /* background-size: 1115px 932px; */
+  background-size: 1115px 932px;
   position: relative;
   overflow: hidden;
   display: inline-block;
