@@ -11,13 +11,6 @@
   font-weight: 500;
 }
 
-.lineForPB {
-  max-width: 50px;
-  margin: 0px;
-  border: 2px solid #009dff;
-  background-color: #009dff;
-}
-
 .pForPB {
   font-size: 16px;
   line-height: 30px;

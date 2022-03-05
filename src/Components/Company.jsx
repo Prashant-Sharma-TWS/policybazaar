@@ -1,23 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { QuoteCompany } from "../Elements/Quotes";
 import { BsArrowUp, BsArrowDown } from "react-icons/bs";
 import sideImage1 from "../Images/side-image-1.png";
 import sideImage2 from "../Images/side-image-2.png";
 import sideImage3 from "../Images/side-image-3.png";
 import listOfInsuranceCompany from "../items.json";
-import { useEffect } from "react";
-
-const initialFilter = {
-  name: "",
-  amount: "",
-  age: "",
-  sort: "",
-  switch: "",
-};
+import { useDispatch, useSelector } from "react-redux";
+import {
+  updateUserDataRequest,
+  updateUserDataSuccess,
+} from "../Redux/Data/data.action";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const Company = () => {
+  const dispatch = useDispatch();
   const [companies, setCompanies] = useState([]);
-  const [currFilter, setCurrFilter] = useState(initialFilter);
+  const { data } = useSelector((state) => state.user);
 
   useEffect(() => {
     setCompanies(listOfInsuranceCompany.insurance);
@@ -25,7 +23,7 @@ export const Company = () => {
 
   const handleChange = (e) => {
     let { name, value } = e.target;
-    if (currFilter.switch === "on") value = "";
+    if (data.filter.switch === "on") value = "";
 
     if (name === "name") handleName(name, value);
     if (name === "amount") handleAmount(name, value);
@@ -33,19 +31,27 @@ export const Company = () => {
     if (name === "sort") handleSort(name, value);
     if (name === "switch") handleSwitch(name, value);
 
-    setCurrFilter({ ...currFilter, [name]: value });
+    dispatch(updateUserDataRequest());
+    dispatch(
+      updateUserDataSuccess({
+        filter: { ...data.filter, [name]: value },
+        card: { ...data.card },
+      })
+    );
   };
-
+  console.log(companies);
   const handleSwitch = (name, value) => {
-    const newData = listOfInsuranceCompany.insurance.map((company) => {
-      if (value === "on")
+    const newData = companies.map((company) => {
+      if (value === "on") {
         return {
           ...company,
-          price: Math.round(
-            company.price * 12 - (company.price * 12 * 5) / 100
-          ),
+          price: Math.round(company.price * 12).toString(),
         };
-      return company;
+      }
+      return {
+        ...company,
+        price: Math.round(company.price / 12).toString(),
+      };
     });
     setCompanies(newData);
   };
@@ -53,22 +59,22 @@ export const Company = () => {
     // sort here
   };
   const handleAge = (name, value) => {
-    const newData = listOfInsuranceCompany.insurance.filter(
-      (company) => company.till === value
-    );
+    const newData = companies.filter((company) => company.till === value);
     setCompanies(newData);
   };
   const handleName = (name, value) => {
-    const newData = listOfInsuranceCompany.insurance.filter((company) =>
+    const newData = companies.filter((company) =>
       company.name.toLowerCase().includes(value.toLowerCase())
     );
     setCompanies(newData);
   };
   const handleAmount = (name, value) => {
-    const newData = listOfInsuranceCompany.insurance.filter(
-      (company) => company.lifeCover === value
-    );
+    const newData = companies.filter((company) => company.lifeCover === value);
     setCompanies(newData);
+  };
+
+  const handleReset = () => {
+    setCompanies(listOfInsuranceCompany.insurance);
   };
 
   return (
@@ -94,21 +100,28 @@ export const Company = () => {
         </div>
       </div>
       <div>
-        <div>
+        <div className="company-details">
           <div>
-            <ul className="filters">
+            <ul className="filters column">
               <li className="search-by-name">
                 <input
                   type="text"
                   placeholder="Search by name"
                   name="name"
+                  // value={data.filter.name}
                   onChange={handleChange}
                 />
               </li>
               <li className="line-in-middle"></li>
               <li className="filter-by-rupee">
                 Life Cover
-                <select name="amount" id="life-cover" onChange={handleChange}>
+                <select
+                  name="amount"
+                  id="life-cover"
+                  className="form-select"
+                  // value={data.filter.amount}
+                  onChange={handleChange}
+                >
                   <option value="45">45 Lac</option>
                   <option value="50">50 Lac</option>
                   <option value="55">55 Lac</option>
@@ -119,7 +132,13 @@ export const Company = () => {
               <li className="line-in-middle"></li>
               <li className="filter-by-age">
                 Cover till age
-                <select name="age" id="cover-till-age" onChange={handleChange}>
+                <select
+                  name="age"
+                  id="cover-till-age"
+                  className="form-select"
+                  // value={data.filter.age}
+                  onChange={handleChange}
+                >
                   <option value="45">45 yrs</option>
                   <option value="50">50 yrs</option>
                   <option value="55">55 yrs</option>
@@ -144,6 +163,7 @@ export const Company = () => {
                   <input
                     type="checkbox"
                     name="switch"
+                    checked={data.filter.switch}
                     onChange={handleChange}
                   />
                   <span className="slider round"></span>
@@ -154,6 +174,11 @@ export const Company = () => {
                 <p>Save 5%</p>
               </div>
             </ul>
+            {!companies.length && (
+              <button className="reset-companies" onClick={handleReset}>
+                Reset
+              </button>
+            )}
             <ListOfCompany companies={companies} />
           </div>
           <div className="sidebar-images">
@@ -174,6 +199,9 @@ export const Company = () => {
 };
 
 const ListOfCompany = ({ companies }) => {
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
   return (
     <div className="list-of-company">
       {Array.isArray(companies) &&
@@ -191,9 +219,9 @@ const ListOfCompany = ({ companies }) => {
               </p>
             </li>
             <li className="line-in-middle"></li>
-            <li>{company.lifeCover} Lac</li>
+            <li className="lac">{company.lifeCover} Lac</li>
             <li className="line-in-middle"></li>
-            <li>
+            <li className="yrs">
               <p>{company.till} yrs</p>
               <p>
                 <img
@@ -206,12 +234,14 @@ const ListOfCompany = ({ companies }) => {
             <li className="line-in-middle"></li>
             <li>{company.claimchance}%</li>
             <li className="line-in-middle"></li>
-            <li>
+            <li className="last-wala">
               <div>
                 <p>Limited Period Offer</p>
                 <p>Plans prices to increase soon</p>
               </div>
-              <button>
+              <button
+                onClick={() => navigate(`${pathname}/${company.id}/payments`)}
+              >
                 ₹ {company.price} <i></i>
               </button>
             </li>

@@ -5,11 +5,12 @@ import icon2 from "../../Images/scaler-images/slide-image-2.png";
 import icon3 from "../../Images/scaler-images/slide-image-3.png";
 import icon4 from "../../Images/scaler-images/slide-image-4.png";
 import icon5 from "../../Images/scaler-images/slide-image-5.png";
+
 export const PBSection = () => {
   return (
     <div className={styles.pbContainer}>
       <h2 className={styles.pbh2}>PB Advantage</h2>
-      {/* <hr className={styles.lineForPB} /> */}
+      <span className={styles.lineForPB}></span>
       <span className={styles.gALine}></span>
 
       <p className={styles.pForPB}>

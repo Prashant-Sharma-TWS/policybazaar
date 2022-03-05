@@ -8,6 +8,8 @@ import { Top } from "../Components/HomeComponents/Top";
 import { Help } from "../Components/HomeComponents/help";
 import { Best } from "../Components/HomeComponents/Best";
 
+import { Investors } from "../Components/HomeComponents/Investors";
+
 export const Home = () => {
   return (
     <div>
@@ -19,6 +21,7 @@ export const Home = () => {
       <GetApp />
       <OurPartners />
       <Help />
+      <Investors />
     </div>
   );
 };
