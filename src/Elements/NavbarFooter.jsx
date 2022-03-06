@@ -223,7 +223,7 @@ export const Nav = styled.nav`
     }
     .hamburger {
       position: absolute;
-      right: 0;
+      right: 6%;
       width: 44px;
       height: 44px;
       display: flex;
@@ -282,6 +282,7 @@ export const Nav = styled.nav`
       flex-direction: column;
       justify-content: space-around;
       align-items: start;
+      transition: all .5s ease-in-out;
     }
   }
 `;

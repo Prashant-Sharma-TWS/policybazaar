@@ -110,16 +110,26 @@ const ListItem = ({ text, arrowDown, className, isUserLoggedIn }) => {
           onMouseLeave={() => setOpen(false)}
         >
           <ul>
-            <li><img src={user1} alt="" width="25px" />&nbsp;Your Profile</li>
-            <li><img src={user2} alt="" width="25px" />&nbsp;Your Policies</li>
-            <li><img src={user3} alt="" width="25px" />&nbsp;Your Transactions</li>
+            <li>
+              <img src={user1} alt="" width="25px" />
+              &nbsp;Your Profile
+            </li>
+            <li>
+              <img src={user2} alt="" width="25px" />
+              &nbsp;Your Policies
+            </li>
+            <li>
+              <img src={user3} alt="" width="25px" />
+              &nbsp;Your Transactions
+            </li>
             <li
               onClick={() => {
                 dispatch(logoutRequest());
                 dispatch(logoutSuccess());
               }}
             >
-              <img src={user4} alt="" width="25px" />&nbsp;Sign Out
+              <img src={user4} alt="" width="25px" />
+              &nbsp;Sign Out
             </li>
           </ul>
         </div>
@@ -227,9 +237,18 @@ const ListItem = ({ text, arrowDown, className, isUserLoggedIn }) => {
           onMouseLeave={() => setOpen(false)}
         >
           <ul>
-            <li><img src={img1} alt="" />Life Renewal</li>
-            <li><img src={img2} alt="" />Health Renewal</li>
-            <li><img src={img4} alt="" />Motor Renewal</li>
+            <li>
+              <img src={img1} alt="" />
+              Life Renewal
+            </li>
+            <li>
+              <img src={img2} alt="" />
+              Health Renewal
+            </li>
+            <li>
+              <img src={img4} alt="" />
+              Motor Renewal
+            </li>
             <li>Two Wheeler Renewal</li>
           </ul>
         </div>
