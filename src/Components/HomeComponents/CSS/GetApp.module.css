@@ -22,16 +22,13 @@ body {
   background: #f7f9ff;
 }
 .app_block .container {
-  max-width: 1140px;
+  max-width: 85%;
   margin: 0 auto;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   -webkit-box-align: center;
   align-items: center;
-}
-.container {
-  width: 1170px;
 }
 
 .container {
@@ -150,4 +147,24 @@ img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
+}
+
+@media screen and (max-width: 750px) {
+  .app_block .container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .app_block .container .copy_part {
+    width: 100%;
+  }
+  .mobile2 {
+    width: 60%;
+    margin: auto;
+  }
+  .app_block .container .mobile {
+    display: none;
+  }
 }

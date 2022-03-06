@@ -21,6 +21,14 @@ export const GetApp = () => {
               <li>Track your policy status on the go</li>
               <li>Download your policy with a single tap</li>
             </ul>
+            <div className={styles.mobile2}>
+              <img
+                src="https://static.pbcdn.in/cdn/images/home-v1/get-app.png"
+                alt="app"
+                className={`${styles.lazy} ${styles.app} ${styles.store}`}
+                loading="lazy"
+              />
+            </div>
             <span className={styles.text}>Download our app from</span>
             <span
               className={`${styles.play_store} ${styles.googleplay} ${styles.download_app1}`}
