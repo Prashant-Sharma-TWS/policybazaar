@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
 export const HomeTop = styled.div`
+  max-width: 1170px;
+  width: 85%;
+  margin: auto;
   > div {
-    width: 85%;
+    width: 100%;
     margin: auto;
     .small-screen-top {
       display: none;

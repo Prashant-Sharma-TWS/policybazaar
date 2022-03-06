@@ -22,7 +22,8 @@ body {
   background: #f7f9ff;
 }
 .app_block .container {
-  max-width: 85%;
+  max-width: 1170px;
+  width: 85%;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -157,12 +158,14 @@ img {
     display: flex;
     flex-wrap: wrap;
     align-items: start;
+    margin: auto;
     justify-content: space-between;
   }
   .app_block .container .copy_part {
     width: 100%;
   }
   .mobile2 {
+    display: inline-block;
     width: 60%;
     margin: auto;
   }

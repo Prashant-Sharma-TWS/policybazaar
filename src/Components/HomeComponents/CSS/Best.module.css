@@ -16,14 +16,14 @@ body {
 }
 
 .container {
-  max-width: 85%;
+  max-width: 1140px;
   margin: auto;
   padding: 0;
   transition: all 0.4s ease-in;
 }
 
 .container {
-  width: 100%;
+  width: 73.13%;
   position: relative;
 }
 
@@ -188,6 +188,9 @@ p.head {
 }
 
 @media screen and (max-width: 750px) {
+  .container {
+    width: 85%;
+  }
   .best_place .container .left_block {
     width: 100%;
     flex-direction: column;

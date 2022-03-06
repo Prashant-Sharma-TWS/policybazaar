@@ -10,7 +10,8 @@ export const Error = styled.div`
 `;
 
 export const Nav = styled.nav`
-  width: 100%;
+  max-width: 1170px;
+  width: 85%;
   height: 60px;
   position: sticky;
   top: 0;
@@ -282,13 +283,12 @@ export const Nav = styled.nav`
       flex-direction: column;
       justify-content: space-around;
       align-items: start;
-      transition: all .5s ease-in-out;
+      transition: all 0.5s ease-in-out;
     }
   }
 `;
 
 export const PageFooter = styled.footer`
-  width: 100%;
   padding: 50px 0;
   color: #ffffff;
   background-color: #03203c;

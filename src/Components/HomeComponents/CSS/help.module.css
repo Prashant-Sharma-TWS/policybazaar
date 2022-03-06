@@ -8,7 +8,7 @@ body {
 }
 
 .help .container {
-  max-width: 85%;
+  max-width: 1170px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;

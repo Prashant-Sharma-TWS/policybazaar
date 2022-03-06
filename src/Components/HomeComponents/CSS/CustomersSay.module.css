@@ -83,6 +83,7 @@
   margin: 0 auto;
 }
 .custMainContainer {
+  max-width: 1170px;
   width: 85%;
   margin: 0px auto;
 }
