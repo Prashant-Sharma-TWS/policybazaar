@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/policybazaar/static/css/main.80789098.css",
-    "main.js": "/policybazaar/static/js/main.cf2de89f.js",
+    "main.css": "/policybazaar/static/css/main.9c59c005.css",
+    "main.js": "/policybazaar/static/js/main.2cd9e420.js",
     "static/media/investment-tax-saving-1.webp": "/policybazaar/static/media/investment-tax-saving-1.5f70ae9f9a29926c318a.webp",
     "static/media/health-tax-saving-1.webp": "/policybazaar/static/media/health-tax-saving-1.39f1447eb173c60ca0fc.webp",
     "static/media/employee-insurance-plans.webp": "/policybazaar/static/media/employee-insurance-plans.adcd28f298c2daa9f297.webp",
@@ -33,11 +33,11 @@
     "index.html": "/policybazaar/index.html",
     "static/media/flag.svg": "/policybazaar/static/media/flag.e5926cb75dcbb15638dae2af4b9abbcc.svg",
     "static/media/user-icon.svg": "/policybazaar/static/media/user-icon.e0cf0b4c432083bdde605fea5e65fbc8.svg",
-    "main.80789098.css.map": "/policybazaar/static/css/main.80789098.css.map",
-    "main.cf2de89f.js.map": "/policybazaar/static/js/main.cf2de89f.js.map"
+    "main.9c59c005.css.map": "/policybazaar/static/css/main.9c59c005.css.map",
+    "main.2cd9e420.js.map": "/policybazaar/static/js/main.2cd9e420.js.map"
   },
   "entrypoints": [
-    "static/css/main.80789098.css",
-    "static/js/main.cf2de89f.js"
+    "static/css/main.9c59c005.css",
+    "static/js/main.2cd9e420.js"
   ]
 }
