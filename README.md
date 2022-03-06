@@ -1,6 +1,6 @@
 # POLICYBAZAAR
 Policybazaar is an online website, which provides multiple insurance policies for customers.<br/>
-<a href="https://prashant-sharma-tws.github.io/policybazaar/">Click here for Live demo</a>
+<a href="https://prashant-sharma-tws.github.io/policybazaar/" target="_blank">Click here for Live demo</a>
 
 ## Team members:
 <p><b>1. Kartik SM</b></p>
