@@ -4,13 +4,33 @@ export const HomeTop = styled.div`
   > div {
     width: 85%;
     margin: auto;
+    .small-screen-top {
+      display: none;
+    }
+    @media screen and (max-width: 750px) {
+      div.small-screen-top {
+        width: 85%;
+        margin: auto;
+        padding: 50px 0 20px;
+        display: block;
+      }
+    }
   }
 
   .top-viewport {
     min-height: 293px;
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 50%);
     align-items: center;
+
+    .akshay-slider {
+      position: absolute;
+      width: 310px;
+      height: 400px;
+      top: 15%;
+      right: 0;
+    }
 
     @media screen and (max-width: 750px) {
       display: none;
@@ -74,8 +94,8 @@ export const HomeTop = styled.div`
       z-index: -1;
     }
     div.akshay-image img {
-     width: 250px;
-     height: 230px;
+      width: 250px;
+      height: 230px;
     }
 
     .slider-parent {

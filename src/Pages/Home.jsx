@@ -7,6 +7,7 @@ import { SliderImage } from "../Components/HomeComponents/SliderImage";
 import { Top } from "../Components/HomeComponents/Top";
 import { Help } from "../Components/HomeComponents/help";
 import { Best } from "../Components/HomeComponents/Best";
+import { CustomersSay } from "../Components/HomeComponents/CustomersSay";
 
 import { Investors } from "../Components/HomeComponents/Investors";
 
@@ -19,9 +20,10 @@ export const Home = () => {
       <SecondSlider />
       <PBSection />
       <GetApp />
+      <CustomersSay />
       <OurPartners />
-      <Help />
       <Investors />
+      <Help />
     </div>
   );
 };

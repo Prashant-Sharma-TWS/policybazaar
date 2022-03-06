@@ -20,7 +20,6 @@ export const Company = () => {
 
   useEffect(() => {
     setCompanies(listOfInsuranceCompany.insurance);
-    console.log(currFilter);
   }, []);
 
   console.log(companies);
@@ -45,6 +44,7 @@ export const Company = () => {
         plan: { ...data.plan },
       })
     );
+    setCurrFilter({ ...currFilter, [name]: value });
   };
 
   const handleSwitch = (value) => {
@@ -138,7 +138,7 @@ export const Company = () => {
                   type="text"
                   placeholder="Search by name"
                   name="name"
-                  // value={data.filter.name}
+                  value={currFilter.name}
                   onChange={handleChange}
                 />
               </li>
@@ -149,7 +149,7 @@ export const Company = () => {
                   name="amount"
                   id="life-cover"
                   className="form-select"
-                  // value={data.filter.amount}
+                  value={currFilter.amount}
                   onChange={handleChange}
                 >
                   <option value="45">45 Lac</option>
@@ -166,7 +166,7 @@ export const Company = () => {
                   name="age"
                   id="cover-till-age"
                   className="form-select"
-                  // value={data.filter.age}
+                  value={currFilter.age}
                   onChange={handleChange}
                 >
                   <option value="45">45 yrs</option>
