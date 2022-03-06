@@ -243,3 +243,38 @@ p {
   height: 60px;
   margin: 0 auto;
 }
+
+@media screen and (max-width: 750px) {
+  .help .container {
+    flex-direction: column;
+  }
+  .help .container .help_text {
+    width: 100%;
+    -webkit-box-ordinal-group: 3;
+    order: 2;
+  }
+  .help .container .help_pic {
+    display: none;
+  }
+  .help .container .help_pic2 {
+    width: 60%;
+    margin: auto;
+    padding: 0 0 20px;
+  }
+
+  .group_companies .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .group_companies .container .text {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .group_companies .container .co_logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+}

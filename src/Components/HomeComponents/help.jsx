@@ -28,6 +28,13 @@ export const Help = () => {
               your concerns. Give us a call, request a callback or drop us an
               email, we’re here to help.
             </p>
+            <div className={styles.help_pic2}>
+              <img
+                src="https://static.pbcdn.in/cdn/images/home-v1/help.png"
+                alt="help"
+                loading="lazy"
+              />
+            </div>
             <a
               href="mailto:care@policybazaar.com?Subject=General%20Enquiries"
               className={styles.btn}
@@ -55,39 +62,34 @@ export const Help = () => {
           </div>
           <div className={styles.co_logo}>
             <div className={styles.logo_block}>
-              <a
+              <span
                 className={`${styles.co_logo_sprite} ${styles.doc_prime}`}
-                target="_blank"
                 href="https://docprime.com/?journey_type=doctor&amp;utm_source=pb&amp;utm_medium=link&amp;utm_content=doctor"
-              ></a>
+              ></span>
             </div>
             <div className={styles.logo_block}>
-              <a
+              <span
                 className={`${styles.co_logo_sprite} ${styles.quick_fix_cars}`}
-                target="_blank"
                 href="https://www.quickfixcars.com/home?Utm_Source=policybazaar&amp;Utm_Campaign=pbwebsite&amp;Utm_Medium=pbbanner"
-              ></a>
+              ></span>
             </div>
             <div className={styles.logo_block}>
-              <a
+              <span
                 className={`${styles.co_logo_sprite} ${styles.policy_bazaar}`}
-                target="_blank"
                 href="https://www.policybazaar.ae/?utm_source=policybazaar&amp;utm_campaign=pbwebsite&amp;utm_medium=groupcompanies"
-              ></a>
+              ></span>
             </div>
             <div className={styles.logo_block}>
-              <a
+              <span
                 className={`${styles.co_logo_sprite} ${styles.paisa_bazaar}`}
-                target="_blank"
                 href="https://www.paisabazaar.com/?utm_content=cs_campaign&amp;utm_source=policybazaar&amp;utm_medium=home_page_product_icon"
-              ></a>
+              ></span>
             </div>
             <div className={styles.logo_block}>
-              <a
+              <span
                 className={`${styles.co_logo_sprite} ${styles.pb_partner}`}
-                target="_blank"
                 href="https://www.pbpartners.com/?utm_source=policybazaar&amp;utm_campaign=pbwebsite&amp;utm_medium=pb-partner"
-              ></a>
+              ></span>
             </div>
             <div className={`${styles.logo_block} ${styles.last}`}>
               <div
