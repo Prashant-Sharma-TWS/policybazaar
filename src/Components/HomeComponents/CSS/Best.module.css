@@ -16,17 +16,19 @@ body {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 85%;
+  margin: auto;
   padding: 0;
   transition: all 0.4s ease-in;
 }
 
 .container {
-  width: 73.13%;
+  width: 100%;
   position: relative;
 }
 
 .best_place .container .left_block {
+  width: 100%;
   display: flex;
   overflow: auto;
   padding-bottom: 26px;
@@ -81,6 +83,7 @@ body {
   height: 180px;
   text-align: left;
   display: inline-block;
+  align-items: center;
   border-radius: 8px;
   box-shadow: 0 6px 16px rgba(52, 105, 203, 0.16);
   position: relative;
@@ -105,7 +108,7 @@ p.head {
   padding: 10px 11px 0 16px;
 }
 
-.best_place .container .right_block .info_box.insurer {
+.best_place .container .right_block .info_box {
   margin: 64px 40px 0 0;
 }
 
@@ -116,6 +119,7 @@ p.head {
   height: 180px;
   text-align: left;
   display: inline-block;
+  align-items: center;
   border-radius: 8px;
   box-shadow: 0 6px 16px rgba(52, 105, 203, 0.16);
   position: relative;
@@ -181,4 +185,29 @@ p.head {
   height: 1px;
   max-width: 100%;
   vertical-align: middle;
+}
+
+@media screen and (max-width: 750px) {
+  .best_place .container .left_block {
+    width: 100%;
+    flex-direction: column;
+  }
+  .best_place .container .left_block .txt_block {
+    width: 100%;
+  }
+  .best_place .container .right_block {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    text-align: right;
+    padding-right: 10px;
+  }
+  .best_place .container .right_block .info_box,
+  .best_place .container .right_block .info_box.claims,
+  .best_place .container .right_block .info_box.lowest_price {
+    margin: 20px 0;
+  }
 }
