@@ -30,6 +30,7 @@
 .investorWraper {
   width: 85%;
   margin: 2em auto;
+  max-width: 1140px;
   /* border: 10px solid aqua; */
 }
 
