@@ -12,6 +12,10 @@ export const Routers = () => {
       <Routes>
         <Route path="/policybazaar" element={<Home />} />
         <Route
+          path="/policybazaar/*"
+          element={<Error>404 &nbsp; Not Found</Error>}
+        />
+        <Route
           path="/policybazaar/Term%20Life%20Insurance"
           element={<Insurance />}
         />
@@ -163,10 +167,6 @@ export const Routers = () => {
         <Route
           path="/policybazaar/1%20Cr%20Health%20Insurance/quotes/:id/payments"
           element={<Payments />}
-        />
-        <Route
-          path="/policybazaar/*"
-          element={<Error>404 &nbsp; Not Found</Error>}
         />
         <Route path="/*" element={<Error>404 &nbsp; Not Found</Error>} />
       </Routes>
