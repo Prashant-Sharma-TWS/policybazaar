@@ -1,12 +1,10 @@
 .ourpartner {
-  opacity: 1;
-}
-.ourpartner {
   width: 100vw;
   background-size: 100%;
   display: table;
   padding: 5% 0;
   background-color: #f7f9ff;
+  opacity: 1;
 }
 
 .ptable {
@@ -15,52 +13,37 @@
 }
 
 .container {
-  width: 1170px;
+  width: 85%;
+  margin: 50px 0 0;
   max-width: 100%;
-}
-
-.container {
   padding-right: 15px;
   padding-left: 15px;
-}
-
-.container {
   position: relative;
   margin-left: auto;
   margin-right: auto;
 }
-
-.row {
-  margin-right: -15px;
-  margin-left: -15px;
-}
 .row {
   display: flex;
   flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .col_12 {
   -webkit-box-flex: 0;
   max-width: 100%;
-}
-.col_12 {
   padding-right: 15px;
   padding-left: 15px;
-}
-
-.col_12 {
   position: relative;
   width: 100%;
   min-height: 1px;
 }
+
 .ourpartner .partner_title {
   margin: 0 0 30px;
 }
 .ourpartner .partner_title .h2 {
   font-size: 30px;
-}
-
-.ourpartner .partner_title .h2 {
   color: rgba(0, 0, 0, 0.87);
   -webkit-box-pack: center;
   justify-content: center;
@@ -136,4 +119,11 @@ p {
 .logo_icon:hover {
   filter: grayscale(0%);
   opacity: 1;
+}
+
+@media screen and (max-width: 750px) {
+  .partnerLogo {
+    margin: 0;
+    justify-content: space-around;
+  }
 }
