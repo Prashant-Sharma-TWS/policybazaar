@@ -1,17 +1,43 @@
 {
   "files": {
-    "main.css": "/policybazaar/static/css/main.96c80da0.css",
-    "main.js": "/policybazaar/static/js/main.dd10b087.js",
+    "main.css": "/policybazaar/static/css/main.80789098.css",
+    "main.js": "/policybazaar/static/js/main.cf2de89f.js",
+    "static/media/investment-tax-saving-1.webp": "/policybazaar/static/media/investment-tax-saving-1.5f70ae9f9a29926c318a.webp",
+    "static/media/health-tax-saving-1.webp": "/policybazaar/static/media/health-tax-saving-1.39f1447eb173c60ca0fc.webp",
+    "static/media/employee-insurance-plans.webp": "/policybazaar/static/media/employee-insurance-plans.adcd28f298c2daa9f297.webp",
+    "static/media/side-image-1.png": "/policybazaar/static/media/side-image-1.15f8301d7d66b42c7d03.png",
+    "static/media/slide-image-1.png": "/policybazaar/static/media/slide-image-1.43ec073a3c9a5c0823b2.png",
+    "static/media/side-image-3.png": "/policybazaar/static/media/side-image-3.7fdef8f4c177f77e6332.png",
+    "static/media/slide-image-3.png": "/policybazaar/static/media/slide-image-3.8be5e922fb6822b9698e.png",
+    "static/media/slide-image-2.png": "/policybazaar/static/media/slide-image-2.86cb3e76fe44073a0671.png",
+    "static/media/payment-left-sidebar-image.png": "/policybazaar/static/media/payment-left-sidebar-image.436317fe5c08c9dc41f3.png",
+    "static/media/minislider1.webp": "/policybazaar/static/media/minislider1.ec79350ce3ff6686a9e0.webp",
+    "static/media/minislider2.webp": "/policybazaar/static/media/minislider2.da713cd140cfe7de7451.webp",
+    "static/media/slide-image-4.png": "/policybazaar/static/media/slide-image-4.a7cd5f502c1f8d445d6b.png",
+    "static/media/side-image-2.png": "/policybazaar/static/media/side-image-2.a98a7bd6fb21ee71e633.png",
+    "static/media/info.JPG": "/policybazaar/static/media/info.53d466c85a9ceee3be17.JPG",
+    "static/media/akshay2.png": "/policybazaar/static/media/akshay2.ce72a6ffb88f0f08fb9c.png",
     "static/media/logo.svg": "/policybazaar/static/media/logo.cc9a9192b5abf72178078a266a7b96f0.svg",
+    "static/media/tiger.JPG": "/policybazaar/static/media/tiger.1dcb2afdde3498943531.JPG",
+    "static/media/akshay1.png": "/policybazaar/static/media/akshay1.8316bfd124920f1721d8.png",
+    "static/media/stead.JPG": "/policybazaar/static/media/stead.029cfcd53a5526fcc3f7.JPG",
+    "static/media/akshay3.png": "/policybazaar/static/media/akshay3.6b73212034d51ba020fa.png",
+    "static/media/temask.JPG": "/policybazaar/static/media/temask.7dd0ef66da9539fc5e1b.JPG",
     "static/media/form-image.webp": "/policybazaar/static/media/form-image.8529a094192a5e85d9b6.webp",
-    "static/media/flag.svg": "/policybazaar/static/media/flag.e5926cb75dcbb15638dae2af4b9abbcc.svg",
+    "static/media/premji.JPG": "/policybazaar/static/media/premji.ddbad96f38b235069d1d.JPG",
+    "static/media/minislider5.webp": "/policybazaar/static/media/minislider5.9c2414d73d12874bf201.webp",
+    "static/media/minislider3.webp": "/policybazaar/static/media/minislider3.fc79c4d3f2719d98c571.webp",
+    "static/media/minislider4.webp": "/policybazaar/static/media/minislider4.fd54f9d8f35a0acce2bc.webp",
+    "static/media/minislider6.webp": "/policybazaar/static/media/minislider6.ac45f3da0740d8dcc364.webp",
+    "static/media/minislider7.webp": "/policybazaar/static/media/minislider7.37c742fccb8f853103ba.webp",
     "index.html": "/policybazaar/index.html",
+    "static/media/flag.svg": "/policybazaar/static/media/flag.e5926cb75dcbb15638dae2af4b9abbcc.svg",
     "static/media/user-icon.svg": "/policybazaar/static/media/user-icon.e0cf0b4c432083bdde605fea5e65fbc8.svg",
-    "main.96c80da0.css.map": "/policybazaar/static/css/main.96c80da0.css.map",
-    "main.dd10b087.js.map": "/policybazaar/static/js/main.dd10b087.js.map"
+    "main.80789098.css.map": "/policybazaar/static/css/main.80789098.css.map",
+    "main.cf2de89f.js.map": "/policybazaar/static/js/main.cf2de89f.js.map"
   },
   "entrypoints": [
-    "static/css/main.96c80da0.css",
-    "static/js/main.dd10b087.js"
+    "static/css/main.80789098.css",
+    "static/js/main.cf2de89f.js"
   ]
 }
