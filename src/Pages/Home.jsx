@@ -20,8 +20,8 @@ export const Home = () => {
       <PBSection />
       <GetApp />
       <OurPartners />
-      <Help />
       <Investors />
+      <Help />
     </div>
   );
 };
